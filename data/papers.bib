@@ -1,14 +1,205 @@
-@inproceedings{wu2024beyond,
-title={Beyond Silent Letters: Amplifying LLMs in Emotion Recognition with Vocal Nuances},
-author={Wu, Zehui and Gong, Ziwei and Ai, Lin and Shi, Pengyuan and Donbekci, Kaan and Hirschberg, Julia},
-abstract={This paper introduces a novel approach to emotion detection in speech using Large Language Models (LLMs). We address the limitation of LLMs in processing audio inputs by translating speech characteristics into natural language descriptions. Our method integrates these descriptions into text prompts, enabling LLMs to perform multimodal emotion analysis without architectural modifications. We evaluate our approach on two datasets: IEMOCAP and MELD, demonstrating significant improvements in emotion recognition accuracy, particularly for high-quality audio data. Our experiments show that incorporating speech descriptions yields a 2 percentage point increase in weighted F1 score on IEMOCAP (from 70.111% to 72.596%). We also compare various LLM architectures and explore the effectiveness of different feature representations. Our findings highlight the potential of this approach in enhancing emotion detection capabilities of LLMs and underscore the importance of audio quality in speech-based emotion recognition tasks. We'll release the source code on Github.},
-booktitle = "Proceedings of the 2025 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
-publisher = "Association for Computational Linguistics",
-month = apr,
-year={2025},
-address="Albuquerque, New Mexico, USA",
-abbr={NAACL 2025},
-pdf={https://arxiv.org/pdf/2407.21315},
-preview={beyond_silent_letters.png},
-bibtex_show={true},
+
+
+
+
+
+@article{wang2025solving,
+  title={Solving the Content Gap in Roblox Game Recommendations: LLM-Based Profile Generation and Reranking},
+  author={Wang, Chen and Wei, Xiaokai and Jiang, Yexi and Ong, Frank and Gao, Kevin and Yu, Xiao and Hui, Zheng and Yoon, Se-eun and Yu, Philip and Gong, Michelle},
+  journal={arXiv preprint arXiv:2502.06802},
+  abbr={Pre-print},
+  pdf={https://arxiv.org/pdf/2502.06802},
+  abstract = {With the vast and dynamic user-generated content on Roblox, creating effective game recommendations requires a deep understanding of game content. Traditional recommendation models struggle with the inconsistent and sparse nature of game text features such as titles and descriptions. Recent advancements in large language models (LLMs) offer opportunities to enhance recommendation systems by analyzing in-game text data. This paper addresses two challenges: generating high-quality, structured text features for games without extensive human annotation, and validating these features to ensure they improve recommendation relevance. We propose an approach that extracts in-game text and uses LLMs to infer attributes such as genre and gameplay objectives from raw player interactions. Additionally, we introduce an LLM-based re-ranking mechanism to assess the effectiveness of the generated text features, enhancing personalization and user satisfaction. Beyond recommendations, our approach supports applications such as user engagement-based integrity detection, already deployed in production. This scalable framework demonstrates the potential of in-game text understanding to improve recommendation quality on Roblox and adapt recommendations to its unique, user-generated ecosystem.},
+  preview={profile_gen_roblox.png},
+  year={2025}
+
 }
+
+
+@article{hui2025winclick,
+  title={WinClick: GUI Grounding with Multimodal Large Language Models},
+  author={Zheng Hui and Yinheng Li and Dan zhao and Tianyi Chen and Colby Banbury and Kazuhito Koishida},
+  abbr={Pre-print},
+  pdf={https://arxiv.org/abs/2503.04730},
+  abstract ={Graphical User Interface (GUI) tasks are vital for automating workflows such as software testing, user interface navigation. For users, the GUI is the most intuitive platform for interacting with a computer. Previous work identified a key challenge in developing visual GUI agents: GUI grounding - the ability to accurately locate screen elements based on instructions. However, most existing GUI agents rely on structured data formats like DOM or HTML files in training or inferencing, which are inaccessible across all applications, particular in a general desktop environments such as Windows OS. To address this, we introduce WinClick, a novel visual GUI agent developed in Windows platform. WinClick leverages screenshots to detect actionable regions. To overcome the challenge of GUI grounding, we enhance WinClick with GUI grounding pre-training and propose an LLM-based method for aligning GUI grounding data. Additionally, we introduce WinSpot, the first comprehensive benchmark for GUI grounding on Windows. Our experiments demonstrate that WinClick, combined with GUI grounding pre-training, significantly outperforms existing baselines, offering a scalable solution for GUI automation in desktop environments.},
+  preview={winclick.png},
+  journal={arXiv preprint arXiv:2503.04730},
+  year={2025}
+}
+
+@article{Zhang_Zeng_Quan_Hui_Yao_2025, 
+title={Enhancing Multimodal Large Language Models Complex Reason via Similarity Computation}, 
+volume={39}, 
+abbr={AAAI 2025},
+pdf={https://ojs.aaai.org/index.php/AAAI/article/view/33107}, 
+DOI={10.1609/aaai.v39i10.33107}, 
+abstract={Multimodal large language models have experienced rapid growth, and numerous different models have emerged. The interpretability of LVLMs remains an under-explored area. Especially when faced with more complex tasks such as chain-of-thought reasoning, its internal mechanisms still resemble a black box that is difficult to decipher. By studying the interaction and information flow between images and text, we noticed that in models such as LLaVA1.5, image tokens that are semantically related to text are more likely to have information flow convergence in the LLM decoding layer, and these image tokens receive higher attention scores. However, those image tokens that are less relevant to the text do not have information flow convergence, and they only get very small attention scores. To efficiently utilize the image information, we propose a new image token reduction method, Simignore, which aims to improve the complex reasoning ability of LVLMs by computing the similarity between image and text embeddings and ignoring image tokens that are irrelevant and unimportant to the text. Through extensive experiments, we demonstrate the effectiveness of our method for complex reasoning tasks.}, 
+number={10},
+preview={aaai2025.png},
+booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 39. No. 10. 2025.}, author={Zhang, Xiaofeng and Zeng, Fanshuo and Quan, Yihao and Hui, Zheng and Yao, Jiawei}, year={2025}, month={Apr.}, pages={10203-10211} 
+}
+
+@misc{hui2025toxilabopensourcellmsgenerate,
+      title={ToxiLab: How Well Do Open-Source LLMs Generate Synthetic Toxicity Data?}, 
+      author={Zheng Hui and Zhaoxiao Guo and Hang Zhao and Juanyong Duan and Lin Ai and Yinheng Li and Julia Hirschberg and Congrui Huang},
+      year={2025},
+      abbr={Pre-print},
+      eprint={2411.15175},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      abstract ={High-quality, diverse harmful data is essential to addressing real-time applications in content moderation. Current state-of-the-art approaches to toxic content detection using GPT series models are costly and lack explainability. This paper investigates the use of prompt engineering and fine-tuning techniques on open-source LLMs to enhance harmful data augmentation specifically for toxic content detection. We conduct a two-stage empirical study, with stage 1 evaluating six open-source LLMs across multiple datasets using only prompt engineering and stage 2 focusing on fine-tuning. Our findings indicate that Mistral can excel in generating harmful data with minimal hallucination. While fine-tuning these models improves data quality and diversity, challenges such as data duplication and overfitting persist. Our experimental results highlight scalable, cost-effective strategies for enhancing toxic content detection systems. These findings not only demonstrate the potential of open-source LLMs in creating robust content moderation tools. The application of this method in real industrial scenarios further proves the feasibility and efficiency of the fine-tuned open-source LLMs for data augmentation. We hope our study will aid in understanding the capabilities and limitations of current models in toxic content detection and drive further advancements in this field.},
+      preview={toxilab.png},
+      pdf={https://arxiv.org/abs/2411.15175}, 
+}
+
+@inproceedings{liu2024propainsight,
+  title={PropaInsight: Toward Deeper Understanding of Propaganda in Terms of Techniques, Appeals, and Intent},
+  author={Liu, Jiateng and Ai, Lin and Liu, Zizhou and Karisani, Payam and Hui, Zheng and Fung, May and Nakov, Preslav and Hirschberg, Julia and Ji, Heng},
+  booktitle={Proceedings of the 31st International Conference on Computational Linguistics},
+  abbr={COLING 2025},
+  preview={propainsight.png},
+  abstract = {Propaganda plays a critical role in shaping public opinion and fueling disinformation. While existing research primarily focuses on identifying propaganda techniques, it lacks the ability to capture the broader motives and the impacts of such content. To address these challenges, we introduce PropaInsight, a conceptual framework grounded in foundational social science research, which systematically dissects propaganda into techniques, arousal appeals, and underlying intent. PropaInsight offers a more granular understanding of how propaganda operates across different contexts. Additionally, we present PropaGaze, a novel dataset that combines human-annotated data with high-quality synthetic data generated through a meticulously designed pipeline. Our experiments show that off-the-shelf LLMs struggle with propaganda analysis, but PropaGaze significantly improves performance. Fine-tuned Llama-7B-Chat achieves 203.4{\%} higher text span IoU in technique identification and 66.2{\%} higher BertScore in appeal analysis compared to 1-shot GPT-4-Turbo. Moreover, PropaGaze complements limited human-annotated data in data-sparse and cross-domain scenarios, demonstrating its potential for comprehensive and generalizable propaganda analysis.},
+  pdf={https://aclanthology.org/2025.coling-main.376/},
+  year={2025}
+}
+
+@inproceedings{hui-etal-2024-toxicraft,
+    title = {ToxiCraft: A Novel Framework for Synthetic Generation of Harmful Information},
+    author={Zheng Hui and Zhaoxiao Guo and Hang Zhao and Juanyong Duan and Congrui Huang},
+    booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+    month = nov,
+    year = "2024",
+    abbr={EMNLP 2024},
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    pdf={https://aclanthology.org/2024.findings-emnlp.970/},
+    doi = "10.18653/v1/2024.findings-emnlp.970",
+    pages = "16632--16647",
+    preview={toxicraft.jpg},
+    abstract = {In different NLP tasks, detecting harmful content is crucial for online environments, especially with the growing influence of social media. However, previous research has two main issues: 1) a lack of data in low-resource settings, and 2) inconsistent definitions and criteria for judging harmful content, requiring classification models to be robust to spurious features and diverse. We propose Toxicraft, a novel framework for synthesizing datasets of harmful information to address these weaknesses. With only a small amount of seed data, our framework can generate a wide variety of synthetic, yet remarkably realistic, examples of toxic information. Experimentation across various datasets showcases a notable enhancement in detection model robustness and adaptability, surpassing or close to the gold labels.}
+}
+
+@inproceedings{ai2024enhancing,
+  title={Enhancing Pre-Trained Generative Language Models with Question Attended Span Extraction on Machine Reading Comprehension},
+  author={Ai, Lin and Hui, Zheng and Liu, Zizhou and Hirschberg, Julia},
+  booktitle={In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  abbr={EMNLP 2024},
+  preview={qase.jpg},
+  pdf={https://aclanthology.org/2024.emnlp-main.560.pdf},
+  abstract = {Machine Reading Comprehension (MRC) poses a significant challenge in the field of Natural Language Processing (NLP). While mainstream MRC methods predominantly leverage extractive strategies using encoder-only models such as BERT, generative approaches face the issue of out-of-control generation -- a critical problem where answers generated are often incorrect, irrelevant, or unfaithful to the source text. To address these limitations in generative models for MRC, we introduce the Question-Attended Span Extraction (QASE) module. Integrated during the fine-tuning phase of pre-trained generative language models (PLMs), QASE significantly enhances their performance, allowing them to surpass the extractive capabilities of advanced Large Language Models (LLMs) such as GPT-4 in few-shot settings. Notably, these gains in performance do not come with an increase in computational demands. The efficacy of the QASE module has been rigorously tested across various datasets, consistently achieving or even surpassing state-of-the-art (SOTA) results, thereby bridging the gap between generative and extractive models in extractive MRC tasks.},
+  year={2024}
+
+}
+
+
+@inproceedings{ai2024defending,
+  title={Defending Against Social Engineering Attacks in the Age of LLMs},
+  abbr={EMNLP 2024},
+  author={Ai, Lin and Kumarage, Tharindu and Bhattacharjee, Amrita and Liu, Zizhou and Hui, Zheng and Davinroy, Michael and Cook, James and Cassani, Laura and Trapeznikov, Kirill and Kirchner, Matthias and others},
+  booktitle={In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  preview={defend_social.png},
+  pdf={https://aclanthology.org/2024.emnlp-main.716.pdf},
+  abstract={The proliferation of Large Language Models
+    (LLMs) poses challenges in detecting and mitigating digital deception, as these models can
+    emulate human conversational patterns and facilitate chat-based social engineering (CSE) attacks. This study investigates the dual capabilities of LLMs as both facilitators and defenders against CSE threats. We develop a novel
+    dataset, SEConvo, simulating CSE scenarios
+    in academic and recruitment contexts, and designed to examine how LLMs can be exploited
+    in these situations. Our findings reveal that,
+    while off-the-shelf LLMs generate high-quality
+    CSE content, their detection capabilities are
+    suboptimal, leading to increased operational
+    costs for defense. In response, we propose ConvoSentinel, a modular defense pipeline that improves detection at both the message and the
+    conversation levels, offering enhanced adaptability and cost-effectiveness. The retrievalaugmented module in ConvoSentinel identifies
+    malicious intent by comparing messages to a
+    database of similar conversations, enhancing
+    CSE detection at all stages. Our study highlights the need for advanced strategies to leverage LLMs in cybersecurity. },
+    year={2024}
+}
+
+
+
+@article{bonatti2024windows,
+  title={Windows agent arena: Evaluating multi-modal os agents at scale},
+  author={Rogerio Bonatti and Dan Zhao and Francesco Bonacci and Dillon Dupont and Sara Abdali and Yinheng Li and Yadong Lu and Justin Wagle and Kazuhito Koishida and Arthur Bucker and Lawrence Jang and Zheng Hui},
+  journal={arXiv preprint arXiv:2409.08264},
+  abbr={Pre-print},
+  pdf={https://arxiv.org/abs/2409.08264},
+  abstract={Large language models (LLMs) show remarkable potential to act as computer agents, enhancing human productivity and software accessibility in multi-modal tasks that require planning and reasoning. However, measuring agent performance in realistic environments remains a challenge since: (i) most benchmarks are limited to specific modalities or domains (e.g. text-only, web navigation, Q&A, coding) and (ii) full benchmark evaluations are slow (on order of magnitude of days) given the multi-step sequential nature of tasks. To address these challenges, we introduce the Windows Agent Arena: a reproducible, general environment focusing exclusively on the Windows operating system (OS) where agents can operate freely within a real Windows OS and use the same wide range of applications, tools, and web browsers available to human users when solving tasks. We adapt the OSWorld framework (Xie et al., 2024) to create 150+ diverse Windows tasks across representative domains that require agent abilities in planning, screen understanding, and tool usage. Our benchmark is scalable and can be seamlessly parallelized in Azure for a full benchmark evaluation in as little as 20 minutes. To demonstrate Windows Agent Arena's capabilities, we also introduce a new multi-modal agent, Navi. Our agent achieves a success rate of 19.5% in the Windows domain, compared to 74.5% performance of an unassisted human. Navi also demonstrates strong performance on another popular web-based benchmark, Mind2Web. We offer extensive quantitative and qualitative analysis of Navi's performance, and provide insights into the opportunities for future research in agent development and data generation using Windows Agent Arena.
+Webpage: https://microsoft.github.io/WindowsAgentArena
+Code: https://github.com/microsoft/WindowsAgentArena},
+  preview={windowsarena.png},
+  year={2024}
+}
+
+
+
+@article{ding2024ll,
+  title={LL-Diff: Low-Light Image Enhancement Utilizing Langevin Sampling Diffusion},
+  author={Ding, Boren and Zhang, Xiaofeng and Yu, Zekun and Hui, Zheng},
+  abbr={IJPRAI 2024},
+  booktitle={International Journal of Pattern Recognition and Artificial Intelligence},
+  volume={38},
+  number={13},
+  pages={2454013},
+  year={2024},
+  preview={ll_diff.jpg},
+  publisher={World Scientific Publishing Company}
+}
+
+
+
+@inproceedings{ai2024tweetintent,
+  title={TweetIntent@ Crisis: A Dataset Revealing Narratives of Both Sides in the Russia-Ukraine Crisis},
+  author={Ai, Lin and Gupta, Sameer and Oak, Shreya and Hui, Zheng and Liu, Zizhou and Hirschberg, Julia},
+  abbr={ICWSM 2024},
+  booktitle={Proceedings of the International AAAI Conference on Web and Social Media},
+  volume={18},
+  pages={1872--1887},
+  preview={icwsm24.jpg},
+  year={2024}
+}
+
+
+
+
+@inproceedings{li2023ntire,
+  title={NTIRE 2023 challenge on efficient super-resolution: Methods and results},
+  author={Li, Yawei and Zhang, Yulun and Timofte, Radu and Van Gool, Luc and Yu, Lei and Li, Youwei and Li, Xinpeng and Jiang, Ting and Wu, Qi and Han, Mingyan and others},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  abbr={CVPR 2023},
+  pages={1922--1960},
+  year={2023}
+}
+
+@inproceedings{hui2021federation,
+  title={Federation learning optimization using distillation},
+  author={Hui, Zheng Zack and Chen, Dingjie and Xu, Zihang},
+  abbr={ACCTCS 2021},
+  booktitle={2021 Asia-Pacific Conference on Communications Technology and Computer Science (ACCTCS)},
+  pages={25--28},
+  year={2021},
+  organization={IEEE}
+}
+
+@article{feng2019unveiling,
+  title={Unveiling tropospheric ozone by the traditional atmospheric model and machine learning, and their comparison: A case study in hangzhou, China},
+  author={Feng, Rui and Zheng, Hui-jun and Zhang, An-ran and Huang, Chong and Gao, Han and Ma, Yu-cheng},
+  abbr={EP 2019},
+  journal={Environmental pollution},
+  volume={252},
+  pages={366--378},
+  year={2019},
+  publisher={Elsevier}
+}
+
+
+
+
+
+
+
+
+
+
+
+

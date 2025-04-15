@@ -1,85 +1,206 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .subtitle {
-    color: #666;
-    margin-bottom: 2rem;
-  }
-  
-  .filterInput {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 2rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .publicationList {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .publicationItem {
-    padding: 1.5rem;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tags {
-    margin-bottom: 1rem;
-  }
-  
-  .tag {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    margin-right: 0.5rem;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    color: #666;
-  }
-  
-  .abstract {
-    margin: 1rem 0;
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  .links {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .links a,
-  .bibButton {
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .links a {
-    background-color: #0070f3;
-    color: white;
-  }
-  
-  .bibButton {
-    background-color: #f0f0f0;
-    border: none;
-    color: #666;
-  }
-  
-  .links a:hover,
-  .bibButton:hover {
-    transform: translateY(-1px);
-  }
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  color: var(--text-color);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.publicationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.publicationCard {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.publicationCard:hover {
+  transform: translateY(-2px);
+}
+
+.cardContent {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.imageContainer {
+  position: relative;
+  flex-shrink: 0;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;  /* Changed from center to flex-start */
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+/* Conference-specific badge colors */
+.badge[data-conf="AAAI"] {
+  background: #FF6B6B;
+  color: white;
+}
+
+.badge[data-conf="NAACL"] {
+  background: #4ECDC4;
+  color: white;
+}
+
+.badge[data-conf="COLING"] {
+  background: #45B7D1;
+  color: white;
+}
+
+.badge[data-conf="EMNLP"] {
+  background:#F1C40F;
+  color: white;
+}
+
+.badge[data-conf="CVPR"] {
+  background: #FFAD60;
+  color: white;
+}
+
+.badge[data-conf="ICWSM"] {
+  background: #9B59B6;
+  color: white;
+}
+
+.badge[data-conf="IJPRAI"] {
+  background: #3498DB;
+  color: white;
+}
+
+.badge[data-conf="Pre-print"] {
+  background: #95A5A6;
+  color: white;
+}
+
+.badge[data-conf="ACCTCS"] {
+  background: #E74C3C;
+  color: white;
+}
+
+.badge[data-conf="EP"] {
+  background: #2ECC71;
+  color: white;
+}
+
+.badge[data-conf="WWW"] {
+  background: #736fa3;
+  color: black;
+}
+
+.badge[data-conf="ACL"] {
+  background: #8E44AD;
+  color: white;
+}
+
+.previewImage {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;  /* Added to keep image centered while badge aligns left */
+}
+
+.cardContent {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.publicationInfo {
+  flex: 1;
+}
+
+.authors {
+  color: #bbb;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.publicationTitle {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.venue {
+  color: #888;
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.actionButton {
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #333;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+}
+
+.actionButton:hover {
+  background: #444;
+}
+
+.abstract {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.highlightedAuthor {
+  color: #3ea8d6;
+  text-decoration: underline;
+  font-weight: 500;
+}

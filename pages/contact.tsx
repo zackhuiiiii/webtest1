@@ -1,28 +1,23 @@
 import ContactCode from '@/components/ContactCode';
-
-import styles from '@/styles/ContactPage.module.css';
+import MessageBox from '@/components/MessageBox';
+import styles from '@/styles/Contact.module.css';
 
 const ContactPage = () => {
   return (
-    <div className={styles.layout}>
-      <h1 className={styles.pageTitle}>Contact Me</h1>
-      <p className={styles.pageSubtitle}>
-        Feel free to reach out to me through any of the social platforms below.
-        I&apos;m always open to new opportunities and connections.
-      </p>
-      <div className={styles.container}>
-        <div className={styles.contactContainer}>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <div className={styles.contactSection}>
+          <h2 className={styles.title}>Get in Touch</h2>
           <ContactCode />
+        </div>
+        
+        <div className={styles.messageSection}>
+          <h2 className={styles.title}>Send Message</h2>
+          <MessageBox />
         </div>
       </div>
     </div>
   );
 };
-
-export async function getStaticProps() {
-  return {
-    props: { title: 'Contact' },
-  };
-}
 
 export default ContactPage;

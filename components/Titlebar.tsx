@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import Link from 'next/link';
 import styles from '@/styles/Titlebar.module.css';
 
 const Titlebar = () => {
@@ -13,13 +13,21 @@ const Titlebar = () => {
         className={styles.icon}
       />
       <div className={styles.items}>
-        <p>File</p>
-        <p>Edit</p>
-        <p>View</p>
-        <p>Go</p>
-        <p>Run</p>
-        <p>Terminal</p>
-        <p>Help</p>
+        <Link href="/">
+          <p>Home</p>
+        </Link>
+        <Link href="/about">
+          <p>About Me</p>
+        </Link>
+        <Link href="/publications">
+          <p>Publications</p>
+        </Link>
+        <Link href="/contact">
+          <p>Content</p>
+        </Link>
+        <Link href="/github">
+          <p>GitHub</p>
+        </Link>
       </div>
       <p className={styles.title}>Zack Hui - Visual Studio Code</p>
       <div className={styles.windowButtons}>

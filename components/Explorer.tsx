@@ -7,34 +7,35 @@ import styles from '@/styles/Explorer.module.css';
 
 const explorerItems = [
   {
-    name: 'home.tsx',
+    name: 'Home',
     path: '/',
     icon: '/logos/react_icon.svg',
   },
   {
-    name: 'about.html',
+    name: 'About Me.html',
     path: '/about',
     icon: '/logos/html_icon.svg',
   },
+  
+  // {
+  //   name: 'projects.js',
+  //   path: '/projects',
+  //   icon: '/logos/js_icon.svg',
+  // },
   {
-    name: 'contact.css',
-    path: '/contact',
-    icon: '/logos/css_icon.svg',
-  },
-  {
-    name: 'projects.js',
-    path: '/projects',
-    icon: '/logos/js_icon.svg',
-  },
-  {
-    name: 'articles.json',
-    path: '/articles',
+    name: 'Publications',
+    path: '/publications',
     icon: '/logos/json_icon.svg',
   },
   {
     name: 'github.md',
     path: '/github',
     icon: '/logos/markdown_icon.svg',
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+    icon: '/logos/css_icon.svg',
   },
 ];
 

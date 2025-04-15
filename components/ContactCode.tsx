@@ -1,59 +1,37 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone, faLocationDot, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import styles from '@/styles/ContactCode.module.css';
-
-const contactItems = [
-  {
-    social: 'website',
-    link: 'nitinranganath.com',
-    href: 'https://nitinranganath.com',
-  },
-  {
-    social: 'email',
-    link: 'nitinranganath@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
-  },
-  {
-    social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
-  },
-  {
-    social: 'linkedin',
-    link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
-  },
-  {
-    social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
-  },
-  {
-    social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
-  },
-  {
-    social: 'peerlist',
-    link: 'nitinranganath',
-    href: 'https://peerlist.io/nitinranganath',
-  },
-];
 
 const ContactCode = () => {
   return (
     <div className={styles.code}>
-      <p className={styles.line}>
-        <span className={styles.className}>.socials</span> &#123;
-      </p>
-      {contactItems.map((item, index) => (
-        <p className={styles.line} key={index}>
-          &nbsp;&nbsp;&nbsp;{item.social}:{' '}
-          <a href={item.href} target="_blank" rel="noopener">
-            {item.link}
-          </a>
-          ;
-        </p>
-      ))}
-      <p className={styles.line}>&#125;</p>
+      <div className={styles.line}>
+        <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
+        <a href="mailto:zh2483@columbia.edu" className={styles.link}>
+          zh2483@columbia.edu
+        </a>
+      </div>
+
+      <div className={styles.line}>
+        <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+        <a 
+          href="https://www.linkedin.com/in/zheng-hui52/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          linkedin.com/in/zheng-hui52
+        </a>
+      </div>
+
+      
+
+      <div className={styles.line}>
+        <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
+        <span className={styles.value}>New York, NY</span>
+      </div>
+
     </div>
   );
 };
