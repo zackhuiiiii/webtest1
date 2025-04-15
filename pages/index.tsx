@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { VscArrowRight } from 'react-icons/vsc';
+import { FaLinkedin, FaGithub, FaGoogle } from 'react-icons/fa';
+import { SiGooglescholar } from 'react-icons/si';
+import { MdEmail } from 'react-icons/md';
 
 import styles from '@/styles/HomePage.module.css';
 
@@ -14,9 +17,9 @@ export default function HomePage() {
       type: 'variable',
     },
     { code: '  const developerInfo = {', type: 'variable' },
-    { code: "    name: 'Nitin Ranganath',", type: 'array-item' },
-    { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
+    { code: "    name: 'Zack Hui',", type: 'array-item' },
+    { code: "    role: 'NLP Researcher',", type: 'array-item' },
+    { code: "    bio: 'AI Alchemist'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
@@ -91,21 +94,56 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <h1 className={styles.developerName}>
-            Nitin <span className={styles.accentText}>Ranganath</span>
+            Zack <span className={styles.accentText}>Hui</span>
           </h1>
 
-          <div className={styles.developerRole}>Full Stack Web Developer</div>
+          <div className={styles.developerRole}> NLP Researcher </div>
 
+          
           <p className={styles.bio}>
-            I build elegant, responsive web applications with modern
-            technologies. Focused on clean code and intuitive user experiences.
+            I’m working to make AI safer and more aligned with 
+            humans—so we can actually trust them in the real world, not just in the lab.
           </p>
+          
 
           <div className={styles.actionLinks}>
-            <Link href="/projects" className={styles.primaryLink}>
-              View Projects <VscArrowRight />
+            <Link href="/about" className={styles.primaryLink}>
+              About Me <VscArrowRight />
             </Link>
           </div>
+
+          <div className={styles.socialLinks}>
+              <a 
+                href="https://www.linkedin.com/in/zheng-hui52/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+              >
+                <FaLinkedin />
+              </a>
+              <a 
+                href="https://github.com/zackhuiiiii" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+              >
+                <FaGithub />
+              </a>
+              <a 
+                href="https://scholar.google.com/citations?user=BnlPIK0AAAAJ&hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+              >
+                <SiGooglescholar />
+              </a>
+              <a 
+                href="mailto:zh2483@columbia.edu"
+                className={styles.socialIcon}
+              >
+                <MdEmail />
+              </a>
+            </div>
         </div>
       </div>
 

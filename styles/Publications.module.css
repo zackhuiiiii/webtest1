@@ -1,0 +1,85 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .filterInput {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .publicationList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .publicationItem {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tags {
+    margin-bottom: 1rem;
+  }
+  
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .abstract {
+    margin: 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .links a,
+  .bibButton {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .links a {
+    background-color: #0070f3;
+    color: white;
+  }
+  
+  .bibButton {
+    background-color: #f0f0f0;
+    border: none;
+    color: #666;
+  }
+  
+  .links a:hover,
+  .bibButton:hover {
+    transform: translateY(-1px);
+  }

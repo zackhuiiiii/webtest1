@@ -837,6 +837,35 @@
   }
 }
 
-.mobileAccent {
-  display: none;
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.socialIcon {
+  color: #080808;
+  font-size: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: translateY(-2px);
+}
+
+/* Custom colors for each social icon */
+.socialIcon:nth-child(1):hover {  /* LinkedIn */
+  color: #0077b5;
+}
+
+.socialIcon:nth-child(2):hover {  /* GitHub */
+  color: #333;
+}
+
+.socialIcon:nth-child(3):hover {  /* Google Scholar */
+  color: #4285f4;
+}
+
+.socialIcon:nth-child(4):hover {  /* Email */
+  color: #c834ed;
 }

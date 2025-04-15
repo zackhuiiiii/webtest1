@@ -12,7 +12,7 @@ const Tabsbar = () => {
       <Tab
         icon="/logos/json_icon.svg"
         filename="articles.json"
-        path="/articles"
+        path="/publications"
       />
       <Tab
         icon="/logos/markdown_icon.svg"

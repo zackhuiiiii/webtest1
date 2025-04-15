@@ -85,3 +85,8 @@
     line-height: 1.65;
   }
 }
+
+.link {
+  color: #0070f3;
+  text-decoration: underline;
+}
