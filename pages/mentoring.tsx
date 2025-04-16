@@ -24,7 +24,7 @@ const MentoringPage = () => {
             <p className={styles.indent}>
             <span className={styles.key}>philosophy</span>:{' '}
             <span className={styles.string}>
-            "I'm deeply grateful for the professors, mentors, and peers who believed in me, guided me, and opened <br />doors I didn’t know existed. Their support shaped my path in ways I could never have imagined. Now, it's my <br />turn to give back and help others find their path, just as others once helped me.
+            "I'm deeply grateful for the professors, mentors, and peers who believed in me, guided me, and opened <br />doors I didn’t know existed. Their support shaped my path in ways I could never have imagined. Now, it's my <br />turn to give back and help others find their path, just as others once helped me."
             </span>,
             </p>
             <p className={styles.indent}>

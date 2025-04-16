@@ -19,8 +19,8 @@ const AboutPage = () => {
               Nigel Collier 
             </a>. My research asks: How can we ensure that large language models 
               behave in safe, aligned, and reliable ways when deployed in the wild? I focus on developing 
-              approaches that bridge alignment theory with real-world deployments of LLMs—particularly in 
-              agentic AI systems and high-stakes applications requiring robust behavioral safeguards—driven 
+              approaches that bridge alignment theory with real-world deployments of LLMs (particularly in 
+              agentic AI systems and high-stakes applications requiring robust behavioral safeguards) driven 
               by a broader goal of building ethically grounded AI that supports the responsible development 
               and deployment of AI models. 
             </p>
@@ -28,7 +28,7 @@ const AboutPage = () => {
             Some of the research directions I&apos;m currently thinking about include (1) scalable 
             methods for aligning LLM behavior with human preferences, (2) building safe LLM agents 
             in open-ended environments, (3) robustness and jailbreak prevention, and (4) 
-            using synthetic data and virtual feedback to improve alignment.
+            using synthetic data and feedback to improve alignment.
 
             
 
@@ -36,7 +36,7 @@ const AboutPage = () => {
 
             <p className={styles.paragraph}>
             Before starting my PhD, I spent a year as a researcher at 
-            Microsoft Research, where I worked on the Responsible AI team, developing alignment 
+            Microsoft Research, where I worked on the Responsible AI team developing alignment 
             and safety methods for both vision-language models and deployed LLM systems. 
             Prior to that, I completed a Master&apos;s in Computer 
             Science at Columbia University, advised by Prof.{' '} 
@@ -84,7 +84,7 @@ const AboutPage = () => {
             <p className={styles.paragraph}>
               <strong>Program Committee Member/Reviewer:</strong>{' '}
               COLM (2025), ICLR (2024-2025), ACL (2024-2025), EMNLP (2023,2025), 
-              NeurIPS (2024), KDD (2024)
+              NeurIPS (2024), KDD (2024), EACL (2023), AACL-IJCNLP(2022)
             </p>
           </section>
 
