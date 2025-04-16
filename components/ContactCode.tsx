@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faLocationDot, faLanguage } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faGoogleScholar } from '@fortawesome/free-brands-svg-icons';
 import styles from '@/styles/ContactCode.module.css';
 
 const ContactCode = () => {
@@ -25,13 +25,34 @@ const ContactCode = () => {
         </a>
       </div>
 
-      
+      <div className={styles.line}>
+        <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+        <a 
+          href="https://github.com/zackhuiiiii" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          Github
+        </a>
+      </div>
+
+      <div className={styles.line}>
+        <FontAwesomeIcon icon={faGoogleScholar} className={styles.icon} />
+        <a 
+          href="https://scholar.google.com/citations?user=BnlPIK0AAAAJ" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          Google Scholar
+        </a>
+      </div>
 
       <div className={styles.line}>
         <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
         <span className={styles.value}>New York, NY</span>
       </div>
-
     </div>
   );
 };

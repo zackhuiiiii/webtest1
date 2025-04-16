@@ -14,9 +14,9 @@ import styles from '@/styles/Sidebar.module.css';
 
 const sidebarTopItems = [
   { Icon: VscFiles, path: '/' },
-  { Icon: VscGithubAlt, path: '/github' },
   { Icon: VscCode, path: '/publications' },
-  { Icon: VscEdit, path: '/publications' },
+  { Icon: VscGithubAlt, path: '/github' },
+  { Icon: VscEdit, path: '/mentoring' },
   { Icon: VscMail, path: '/contact' },
 ];
 

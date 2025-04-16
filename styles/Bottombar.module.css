@@ -46,3 +46,22 @@
     margin-right: 0.5rem;
   }
 }
+
+.link {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #0051c7;
+  text-decoration: underline;
+}
+.copyrightContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  flex: 1;
+}
+

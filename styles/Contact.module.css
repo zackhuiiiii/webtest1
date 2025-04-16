@@ -1,41 +1,62 @@
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 8rem;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-top:40rem; /* Increased from 4rem to 6rem */
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.contactSection,
-.messageSection {
+.mapSection {
+  width: 100%;
+  height: 680px; /* Added fixed height */
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add styles for map container */
+.mapSection > div {
+  flex: 1;
+  min-height: 0; /* Important for preventing overflow */
+  width: 100%;
+}
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   width: 100%;
 }
 
-.title {
-  color: #fff;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: 600;
+.leftColumn,
+.rightColumn {
+  width: 100%;
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
 }
 
-/* Add responsive design for mobile devices */
-@media (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
 
+
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
   .container {
     padding: 1rem;
-    padding-top: 6rem;
+    padding-top: 5rem; /* Adjusted for mobile */
   }
 
-  .title {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+  .mainContent {
+    grid-template-columns: 1fr;
   }
 }

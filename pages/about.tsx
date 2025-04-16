@@ -59,12 +59,49 @@ const AboutPage = () => {
 
             </p>
           </section>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Education</h2>
+            <ul className={styles.educationList}>
+              <li>
+                <span className={styles.degree}>Ph.D.</span>
+                <span className={styles.institution}>Cambridge University</span>
+                <span className={styles.year}>Present</span>
+              </li>
+              <li>
+                <span className={styles.degree}>M.S. in Computer Science</span>
+                <span className={styles.institution}>Columbia University</span>
+                <span className={styles.year}>2023</span>
+              </li>
+              <li>
+                <span className={styles.degree}>B.S. in Computer Science</span>
+                <span className={styles.institution}>Boston University</span>
+                <span className={styles.year}>2021</span>
+              </li>
+            </ul>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Professional Service</h2>
+            <p className={styles.paragraph}>
+              <strong>Program Committee Member/Reviewer:</strong>{' '}
+              COLM (2025), ICLR (2024-2025), ACL (2024-2025), EMNLP (2023,2025), 
+              NeurIPS (2024), KDD (2024)
+            </p>
+          </section>
 
-          
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Teaching</h2>
+            <ul className={styles.teachingList}>
+              <li>Teaching Assistant for Columbia COMS 6111 Advance Database</li>
+              <li>Teaching Assistant for Columbia QMSS 5073, Machine Learning for Social Science</li>
+              <li>Teaching Assistant for BU CS CS330 Analysis of Algorithms</li>
+            </ul>
+          </section>
+
           <section className={styles.section}>
           <h2 className={styles.sectionTitle}>
-            GPT’s Roast of me 🔥🧠
+            GPT's Roast of me 🔥🧠
           </h2>
+          
           <p className={styles.paragraph}>
             Zack be like: “I’ll just run this script real quick” — 3 hours later, still debugging like 🧑‍💻😩. Has 77 Chrome tabs open, 6 terminals, and still asks me, “Why isn’t it working?” 🤔 Bro, you named the same file `final_final_v2_actually_final.json` 💀. Tries to make a model that sees everything… except where their coffee went ☕👀. Legend says their Overleaf doc has more comments than code 📜💬. But let’s be real — Zack’s got more passion than my token limit 💪🚀.
           </p>

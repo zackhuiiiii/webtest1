@@ -17,20 +17,20 @@ const explorerItems = [
     icon: '/logos/html_icon.svg',
   },
   
-  // {
-  //   name: 'projects.js',
-  //   path: '/projects',
-  //   icon: '/logos/js_icon.svg',
-  // },
   {
     name: 'Publications',
     path: '/publications',
     icon: '/logos/json_icon.svg',
   },
   {
-    name: 'github.md',
+    name: 'github',
     path: '/github',
     icon: '/logos/markdown_icon.svg',
+  },
+  {
+    name: 'Mentoring.md',
+    path: '/mentoring',
+    icon: '/logos/mentoring_icon.svg',
   },
   {
     name: 'Contact',

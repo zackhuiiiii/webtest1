@@ -22,11 +22,15 @@ const Titlebar = () => {
         <Link href="/publications">
           <p>Publications</p>
         </Link>
-        <Link href="/contact">
-          <p>Content</p>
-        </Link>
+        
         <Link href="/github">
           <p>GitHub</p>
+        </Link>
+        <Link href="/mentoring">
+          <p>Mentoring</p>
+        </Link>
+        <Link href="/contact">
+          <p>Content</p>
         </Link>
       </div>
       <p className={styles.title}>Zack Hui - Visual Studio Code</p>

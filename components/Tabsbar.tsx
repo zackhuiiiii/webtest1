@@ -15,10 +15,16 @@ const Tabsbar = () => {
       />
       <Tab
         icon="/logos/markdown_icon.svg"
-        filename="github.md"
+        filename="github"
         path="/github"
       />
-      <Tab icon="/logos/css_icon.svg" filename="Content" path="/contact" />
+      <Tab 
+        icon="/logos/mentoring_icon.svg" 
+        filename="Mentoring.md" 
+        path="/mentoring" 
+      />
+      <Tab icon="/logos/css_icon.svg" filename="Contact" path="/contact" />
+            
     </div>
   );
 };

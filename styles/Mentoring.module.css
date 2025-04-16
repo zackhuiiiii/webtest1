@@ -1,0 +1,119 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 6rem;
+}
+
+.terminal {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.terminalHeader {
+  background: #252525;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.terminalButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminalButtons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminalTitle {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.terminalBody {
+  padding: 2rem;
+}
+
+.code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.comment {
+  color: #6a9955;
+}
+
+.keyword {
+  color: #569cd6;
+}
+
+.variable {
+  color: #4fc1ff;
+}
+
+.key {
+  color: #9cdcfe;
+}
+
+.string {
+  color: #ce9178;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.indent {
+  margin-left: 2rem;
+}
+
+.doubleIndent {
+  margin-left: 4rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+  
+  .terminalBody {
+    padding: 1rem;
+  }
+  
+  .code {
+    font-size: 0.8rem;
+  }
+}
+
+.boolean {
+  color: #569cd6;
+}
+
+.statusIndicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.available {
+  background-color: #27c93f;
+  box-shadow: 0 0 8px #27c93f;
+}
+
+.unavailable {
+  background-color: #ff5f56;
+  box-shadow: 0 0 8px #ff5f56;
+}
