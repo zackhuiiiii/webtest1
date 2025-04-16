@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { VscArrowRight } from 'react-icons/vsc';
-import { FaLinkedin, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
 

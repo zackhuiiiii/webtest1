@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faLocationDot, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faGoogleScholar } from '@fortawesome/free-brands-svg-icons';
 import styles from '@/styles/ContactCode.module.css';
 

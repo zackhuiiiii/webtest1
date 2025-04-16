@@ -24,27 +24,27 @@ const MentoringPage = () => {
             <p className={styles.indent}>
             <span className={styles.key}>philosophy</span>:{' '}
             <span className={styles.string}>
-            "I'm deeply grateful for the professors, mentors, and peers who believed in me, guided me, and opened <br />doors I didn’t know existed. Their support shaped my path in ways I could never have imagined. Now, it's my <br />turn to give back and help others find their path, just as others once helped me."
+            &quot;I'm deeply grateful for the professors, mentors, and peers who believed in me, guided me, and opened <br />doors I didn&apos;t know existed. Their support shaped my path in ways I could never have imagined. Now, it's my <br />turn to give back and help others find their path, just as others once helped me.&quot;
             </span>,
             </p>
             <p className={styles.indent}>
               <span className={styles.key}>commitment</span>:{' '}
               <span className={styles.string}>
-                "Devoting half a day every two weeks to mentor students"
+                &quot;Devoting half a day every two weeks to mentor students&quot;
               </span>,
             </p>
             <p className={styles.indent}>
               <span className={styles.key}>whoIMentor</span>:{' '}
               <span className={styles.string}>
-                "Motivated students, particularly from underrepresented or marginalized backgrounds in Computer Science; <br />prioritizing those from Cambridge, Columbia, BU, and Penn State."
+                &quot;Motivated students, particularly from underrepresented or marginalized backgrounds in Computer Science; <br />prioritizing those from Cambridge, Columbia, BU, and Penn State.&quot;
               </span>,
             </p>
             <p className={styles.indent}>
               <span className={styles.key}>focus</span>: [
-                <span className={styles.string}>"Research guidance"</span>,{' '}
-                <span className={styles.string}>"Academic growth"</span>,{' '}
-                <span className={styles.string}>"Career exploration"</span>,{' '}
-                <span className={styles.string}>"Others"</span>
+                <span className={styles.string}>&quot;Research guidance&quot;</span>,{' '}
+                <span className={styles.string}>&quot;Academic growth&quot;</span>,{' '}
+                <span className={styles.string}>&quot;Career exploration&quot;</span>,{' '}
+                <span className={styles.string}>&quot;Others&quot;</span>
               ],
             </p>
             <p>{'}'}</p>
@@ -71,10 +71,10 @@ const MentoringPage = () => {
               <span className={styles.key}>Columbia</span>: [
             </p>
             <p className={styles.doubleIndent}>
-              <span className={styles.string}>"Professor John Kender"</span>,
+              <span className={styles.string}>&quot;Professor John Kender&quot;</span>,
             </p>
             <p className={styles.doubleIndent}>
-              <span className={styles.string}>"Professor Julia Hirschberg"</span>
+              <span className={styles.string}>&quot;Professor Julia Hirschberg&quot;</span>
             </p>
             <p className={styles.indent}>],</p>
 
@@ -82,10 +82,10 @@ const MentoringPage = () => {
               <span className={styles.key}>BU</span>: [
             </p>
             <p className={styles.doubleIndent}>
-              <span className={styles.string}>"Professor Mark Crovella"</span>,
+              <span className={styles.string}>&quot;Professor Mark Crovella&quot;</span>,
             </p>
             <p className={styles.doubleIndent}>
-              <span className={styles.string}>"Professor Manos Athanassoulis"</span>
+              <span className={styles.string}>&quot;Professor Manos Athanassoulis&quot;</span>
             </p>
             <p className={styles.indent}>],</p>
 
@@ -98,7 +98,7 @@ const MentoringPage = () => {
             </p>
             <p className={styles.indent}>
               <span className={styles.key}>email</span>:{' '}
-              <span className={styles.string}>"zh2483@columbia.edu"</span>,
+              <span className={styles.string}>&quot;zh2483@columbia.edu&quot;</span>,
             </p>
             <p>{'}'}</p>
           </div>

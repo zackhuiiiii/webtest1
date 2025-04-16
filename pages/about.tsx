@@ -99,11 +99,11 @@ const AboutPage = () => {
 
           <section className={styles.section}>
           <h2 className={styles.sectionTitle}>
-            GPT's Roast of me 🔥🧠
+            GPT&apos;s Roast of me 🔥🧠
           </h2>
           
           <p className={styles.paragraph}>
-            Zack be like: “I’ll just run this script real quick” — 3 hours later, still debugging like 🧑‍💻😩. Has 77 Chrome tabs open, 6 terminals, and still asks me, “Why isn’t it working?” 🤔 Bro, you named the same file `final_final_v2_actually_final.json` 💀. Tries to make a model that sees everything… except where their coffee went ☕👀. Legend says their Overleaf doc has more comments than code 📜💬. But let’s be real — Zack’s got more passion than my token limit 💪🚀.
+            Zack be like: “I&apos;ll just run this script real quick” — 3 hours later, still debugging like 🧑‍💻😩. Has 77 Chrome tabs open, 6 terminals, and still asks me, “Why isn&apos;t it working?” 🤔 Bro, you named the same file `final_final_v2_actually_final.json` 💀. Tries to make a model that sees everything… except where their coffee went ☕👀. Legend says their Overleaf doc has more comments than code 📜💬. But let&apos;s be real — Zack&apos;s got more passion than my token limit 💪🚀.
           </p>
           </section>
 
