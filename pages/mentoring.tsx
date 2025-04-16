@@ -15,7 +15,7 @@ const MentoringPage = () => {
 
         <div className={styles.terminalBody}>
           <div className={styles.code}>
-            <p className={styles.comment}>// mentoring initiative</p>
+            <p className={styles.comment}>{`// mentoring initiative`}</p>
             <br />
             <p>
               <span className={styles.keyword}>const</span>{' '}
@@ -24,7 +24,7 @@ const MentoringPage = () => {
             <p className={styles.indent}>
             <span className={styles.key}>philosophy</span>:{' '}
             <span className={styles.string}>
-            &quot;I'm deeply grateful for the professors, mentors, and peers who believed in me, guided me, and opened <br />doors I didn&apos;t know existed. Their support shaped my path in ways I could never have imagined. Now, it's my <br />turn to give back and help others find their path, just as others once helped me.&quot;
+            &quot;I&apos;m deeply grateful for the professors, mentors, and peers who believed in me, guided me, and opened <br />doors I didn&apos;t know existed. Their support shaped my path in ways I could never have imagined. Now, it&apos;s my <br />turn to give back and help others find their path, just as others once helped me.&quot;
             </span>,
             </p>
             <p className={styles.indent}>
@@ -49,7 +49,7 @@ const MentoringPage = () => {
             </p>
             <p>{'}'}</p>
             <br />
-            <p className={styles.comment}>// current mentoring status</p>
+            <p className={styles.comment}>{`// current mentoring status`}</p>
             <p>
               <span className={styles.keyword}>const</span>{' '}
               <span className={styles.variable}>status</span> = {'{'}
@@ -62,7 +62,7 @@ const MentoringPage = () => {
             
             <p>{'}'}</p>
             <br />
-            <p className={styles.comment}>// gratitude to my past mentors</p>
+            <p className={styles.comment}>{`// gratitude to my past mentors`}</p>
             <p>
               <span className={styles.keyword}>const</span>{' '}
               <span className={styles.variable}>gratitude</span> = {'{'}
@@ -91,7 +91,7 @@ const MentoringPage = () => {
 
             <p>{'}'}</p>
             <br />
-            <p className={styles.comment}>// get in touch</p>
+            <p className={styles.comment}>{`// get in touch`}</p>
             <p>
               <span className={styles.keyword}>const</span>{' '}
               <span className={styles.variable}>contact</span> = {'{'}
