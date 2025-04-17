@@ -88,3 +88,42 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.25rem;
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .titlebar {
+    height: 40px; /* Increased height for better touch targets */
+    padding: 0 0.25rem;
+  }
+
+  .items {
+    display: none; /* Hide menu items on mobile */
+  }
+
+  .title {
+    flex: 1;
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .windowButtons {
+    display: none; /* Hide window buttons on mobile */
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .titlebar {
+    height: 35px;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .titlebar {
+    height: 32px;
+  }
+}

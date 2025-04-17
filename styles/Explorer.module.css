@@ -1,77 +1,122 @@
 .explorer {
   background: var(--explorer-bg);
-  width: 18vw;
-  color: rgb(225, 228, 232);
-  font-family: 'Source Sans Pro', sans-serif;
   border-right: 1px solid var(--explorer-border);
+  width: 15vw;
+  height: calc(100vh - var(--nav-height) - var(--footer-height));
+  overflow-y: auto;
 }
 
 .title {
-  padding: 0.5rem 0.75rem;
-  font-weight: 300;
-  text-transform: uppercase;
   font-size: 0.9rem;
-  letter-spacing: 1px;
-  margin-bottom: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
 }
 
 .heading {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 0 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
 }
 
 .checkbox {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+  display: none;
+}
+
+.chevron {
+  transition: transform 0.2s;
+  margin-right: 0.5rem;
 }
 
 .files {
-  padding: 0.5rem 0;
-  cursor: pointer;
+  padding: 0.25rem 0;
 }
 
 .file {
-  padding: 0.2rem 1rem;
   display: flex;
   align-items: center;
-  font-size: 0.875rem;
-  color: white;
-  text-decoration: none;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 0.9rem;
 }
 
 .file p {
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 
 .file:hover {
   background: var(--explorer-hover-bg);
 }
 
-.chevron {
-  transition: transform 0.2s;
+.mobileToggle {
+  display: none;
 }
 
-@media screen and (min-width: 2000px) {
+.mobileClose {
+  display: none;
+}
+
+.explorerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
   .explorer {
-    width: 10vw;
+    position: fixed;
+    left: -100%;
+    top: var(--nav-height);
+    bottom: var(--footer-height);
+    width: 80vw;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    background: var(--explorer-bg);
+  }
+
+  .explorer.open {
+    left: 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobileToggle {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--explorer-bg);
+    border: none;
+    padding: 0.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 999;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .mobileClose {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .file {
+    padding: 0.75rem 1rem;
   }
 }
 
-@media screen and (max-width: 900px) {
+/* Small phones */
+@media (max-width: 480px) {
   .explorer {
-    width: 20vw;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .explorer {
-    display: none;
+    width: 85vw;
   }
 }

@@ -30,7 +30,7 @@ const Titlebar = () => {
           <p>Mentoring</p>
         </Link>
         <Link href="/contact">
-          <p>Content</p>
+          <p>Contact</p>
         </Link>
       </div>
       <p className={styles.title}>Zack Hui - Visual Studio Code</p>

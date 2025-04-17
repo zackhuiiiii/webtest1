@@ -19,3 +19,43 @@
   background: var(--tab-active-bg);
   border-bottom: none;
 }
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
+.filename {
+  font-size: 0.85rem;
+  color: #ececec;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .tab {
+    padding: 0.4rem 1rem;
+    min-width: auto;
+    background: var(--tab-bg);
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .filename {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .tab {
+    padding: 0.3rem 0.75rem;
+  }
+
+  .filename {
+    font-size: 0.75rem;
+  }
+}
