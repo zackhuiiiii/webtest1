@@ -21,7 +21,6 @@ interface LocationDensity {
 }
 
 const VisitorMap = () => {
-  const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [visitorDensity, setVisitorDensity] = useState<LocationDensity[]>([]);
   const [totalVisitors, setTotalVisitors] = useState(0);
 
@@ -45,13 +44,10 @@ const VisitorMap = () => {
   };
 
   const getMarkerProps = (count: number) => {
-    // Scale radius based on visitor count (min 4, max 12)
     const radius = Math.min(4 + (count * 2), 12);
-    
-    // Color gradient based on count
     let color;
-    if (count >= 10) color = "#FF0000";      // Red for high density
-    else if (count >= 5) color = "#FFA500";   // Orange for medium density
+    if (count >= 300) color = "#FF0000";      // Red for high density
+    else if (count >= 100) color = "#FFA500";   // Orange for medium density
     else color = "#0070f3";                   // Blue for low density
 
     return { radius, color };
@@ -71,7 +67,6 @@ const VisitorMap = () => {
       const updatedVisitors = [...existingVisitors, newVisitor];
       localStorage.setItem('visitors', JSON.stringify(updatedVisitors));
 
-      setVisitors(updatedVisitors);
       setTotalVisitors(updatedVisitors.length);
       setVisitorDensity(calculateDensity(updatedVisitors));
     } catch (error) {
@@ -84,7 +79,6 @@ const VisitorMap = () => {
       const saved = localStorage.getItem('visitors');
       if (saved) {
         const parsedVisitors = JSON.parse(saved);
-        setVisitors(parsedVisitors);
         setTotalVisitors(parsedVisitors.length);
         setVisitorDensity(calculateDensity(parsedVisitors));
       }
@@ -155,9 +149,7 @@ const VisitorMap = () => {
           </ZoomableGroup>
         </ComposableMap>
       </div>
-      <div className={styles.mobileMessage}>
-        <p>Please visit on desktop to view the interactive visitor map.</p>
-      </div>
+      
     </div>
   );
 };

@@ -1,67 +1,91 @@
 .bottomBar {
-  background: var(--bottombar-bg);
   height: 25px;
-  border-top: 1px solid var(--bottombar-border);
-  color: rgb(225, 228, 232);
-  padding: 0 0.5rem;
+  background: var(--bottom-bar-bg);
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  font-size: 0.8rem;
-}
-
-.bottomBar a {
-  color: white;
-  text-decoration: none;
-}
-
-.icon {
-  margin-right: 4px;
+  align-items: center;
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
 }
 
 .container {
   display: flex;
-  align-items: center;
+  gap: 0.5rem;
+}
+
+.copyrightContainer {
+  display: flex;
+  gap: 1rem;
 }
 
 .section {
   display: flex;
-  margin-right: 0.5rem;
-  height: 24px;
   align-items: center;
-  padding: 0 0.2rem;
-  cursor: pointer;
-  font-family: 'Source Sans Pro', sans-serif;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
 }
 
-.section:hover {
-  background: var(--bottombar-hover-bg);
-}
-
-@media screen and (max-width: 600px) {
-  .bottomBar {
-    font-size: 0.6rem;
-  }
-  .section {
-    margin-right: 0.5rem;
-  }
+.icon {
+  font-size: 0.85rem;
+  margin-right: 3px;
 }
 
 .link {
-  color: #0070f3;
+  color: var(--text-color);
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .link:hover {
-  color: #0051c7;
   text-decoration: underline;
 }
-.copyrightContainer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  justify-content: center;
-  flex: 1;
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .bottomBar {
+    height: auto;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .container,
+  .copyrightContainer {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .section {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+  }
+
+  /* Hide less important sections on mobile */
+  .container:last-child .section:nth-last-child(-n+3) {
+    display: none;
+  }
+
+  .copyrightContainer .section:not(:first-child) {
+    display: none;
+  }
 }
 
+/* Small phones */
+@media (max-width: 480px) {
+  .bottomBar {
+    padding: 0.25rem;
+  }
+
+  .section {
+    font-size: 0.7rem;
+  }
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .bottomBar {
+    height: auto;
+    padding: 0.25rem;
+  }
+}
