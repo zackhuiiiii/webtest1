@@ -17,3 +17,84 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 50px;
+    --footer-height: 25px;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  main {
+    padding-top: calc(var(--nav-height) + 1rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Improve touch targets */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Prevent horizontal scroll */
+  .container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Improve form elements on mobile */
+  input, 
+  select, 
+  textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    max-width: 100%;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Handle orientation changes */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  :root {
+    --nav-height: 40px;
+  }
+
+  main {
+    padding-top: var(--nav-height);
+  }
+}
+
+/* Dark mode optimization */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Reduce motion if preferred */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -47,37 +47,89 @@
   margin-right: auto;
 }
 
-@media screen and (max-width: 1200px) {
+/* Mobile Styles */
+@media (max-width: 768px) {
   .container {
-    display: block;
-    padding: 2rem 1rem;
+    padding: 1rem;
+    padding-top: 5rem;
   }
 
-  .container > div:first-child {
-    border-right: none;
-    margin-bottom: 2rem;
+  .mapSection {
+    height: 300px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    padding: 1.5rem;
+  }
+
+  /* Improve form elements on mobile */
+  input, 
+  textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
+
+  /* Better touch targets */
+  .link,
+  button {
+    min-height: 44px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .flex {
-    display: block;
-  }
-
-  .form input {
-    font-size: 0.85rem;
-  }
-
+/* Small phones */
+@media (max-width: 480px) {
   .container {
-    padding: 1.5rem 0.75rem;
+    padding: 0.75rem;
+    padding-top: 4.5rem;
   }
 
-  .pageTitle {
-    font-size: 1.75rem;
+  .mapSection {
+    height: 250px;
+    border-radius: 8px;
   }
 
-  .pageSubtitle {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+  .leftColumn,
+  .rightColumn {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .container {
+    padding-top: 3.5rem;
+  }
+
+  .mapSection {
+    height: 200px;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr 1fr; /* Keep two columns in landscape */
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+    padding-top: 5.5rem;
+  }
+
+  .mapSection {
+    height: 400px;
   }
 }
