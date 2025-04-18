@@ -10,11 +10,11 @@ const CustomHead = ({ title }: CustomHeadProps) => {
       <title>{title}</title>
       <meta
         name="description"
-        content="Zack Hui is an avid full stack web developer building websites and applications you'd love to use"
+        content="Zack Hui"
       />
       <meta
         name="keywords"
-        content="Zack Hui, nitin, ranganath, web developer portfolio, nitin web developer, nitin developer, mern stack, Zack Hui portfolio, vscode-portfolio"
+        content="Zack Hui"
       />
       <meta property="og:title" content="Zack Hui's Portfolio" />
       <meta

@@ -12,40 +12,37 @@ export default function HomePage() {
 
   const codeLines = [
     { code: 'const HomePage = () => {', type: 'function' },
-    {
-      code: '  const [isLoaded, setIsLoaded] = useState(true);',
-      type: 'variable',
-    },
     { code: '  const developerInfo = {', type: 'variable' },
     { code: "    name: 'Zack Hui',", type: 'array-item' },
     { code: "    role: 'NLP Researcher',", type: 'array-item' },
     { code: "    bio: 'AI Alchemist'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
-    { code: '  useEffect(() => {', type: 'nested-function' },
-    {
-      code: '    document.title = `${developerInfo.name} | Portfolio`;',
-      type: 'return',
-    },
-    { code: '    setIsLoaded(true);', type: 'function-call' },
-    { code: '  }, []);', type: 'close' },
+    { code: '  const websiteGuide = {', type: 'variable' },
+    { code: '    welcome: "Let me show you around:",', type: 'string' },
+    { code: '    sections: [', type: 'array-start' },
+    { code: "      'Want to know more about me?'", type: 'string' },
+    { code: "      '→ Check out my story in About Me'", type: 'string' },
     { code: '', type: 'blank' },
-    { code: '  return (', type: 'return-object' },
-    { code: '    <main className="hero-container">', type: 'object-method' },
-    { code: '      <h1>{developerInfo.name}</h1>', type: 'object-method' },
-    { code: '      <p>{developerInfo.role}</p>', type: 'object-method' },
-    { code: '      <div className="cta">', type: 'object-method' },
-    {
-      code: '        <Link href="/projects">View Projects</Link>',
-      type: 'object-method',
-    },
-    { code: '      </div>', type: 'object-method' },
-    { code: '    </main>', type: 'object-method' },
-    { code: '  );', type: 'close' },
-    { code: '};', type: 'close-function' },
+    { code: "      'Interested in my research?'", type: 'string' },
+    { code: "      '→ Browse my Publications'", type: 'string' },
     { code: '', type: 'blank' },
-    { code: 'export default HomePage;', type: 'function-call' },
-  ];
+    { code: "      'Looking for code samples?'", type: 'string' },
+    { code: "      '→ Visit my GitHub projects'", type: 'string' },
+    { code: '', type: 'blank' },
+    { code: "      'Need guidance in AI?'", type: 'string' },
+    { code: "      '→ Learn about my Mentoring program'", type: 'string' },
+    { code: '', type: 'blank' },
+    { code: "      'Want to collaborate?'", type: 'string' },
+    { code: "      '→ Get in touch through Contact'", type: 'string' },
+    { code: '    ]', type: 'array-end' },
+    { code: '  };', type: 'close' },
+    { code: '', type: 'blank' },
+    { code: '  // Ready to explore?', type: 'comment' },
+    { code: '  // Click any section to begin!', type: 'comment' },
+    { code: '', type: 'blank' },
+    { code: 'export default HomePage;', type: 'function-call' }
+];
 
   useEffect(() => {
     const interval = setInterval(() => {

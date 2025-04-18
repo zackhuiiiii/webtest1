@@ -1,8 +1,8 @@
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 6rem;
+  padding-top: 15rem;
 }
 
 .terminal {
@@ -84,7 +84,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
-    padding-top: 5rem;
+    padding-top: 15rem;
   }
   
   .terminalBody {

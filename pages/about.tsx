@@ -64,7 +64,7 @@ const AboutPage = () => {
             <ul className={styles.educationList}>
               <li>
                 <span className={styles.degree}>Ph.D.</span>
-                <span className={styles.institution}>Cambridge University</span>
+                <span className={styles.institution}>University of Cambridge</span>
                 <span className={styles.year}>Present</span>
               </li>
               <li>

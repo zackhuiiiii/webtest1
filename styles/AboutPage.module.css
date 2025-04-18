@@ -61,30 +61,7 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    padding: 2rem 1rem;
-  }
 
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .sectionTitle {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .paragraph {
-    font-size: 0.95rem;
-    line-height: 1.65;
-  }
-}
 
 .link {
   color: #0070f3;
@@ -166,13 +143,56 @@
   margin-left: auto;
 }
 
+/* Mobile Styles */
 @media screen and (max-width: 600px) {
+  .container {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  .serviceList,
+  .teachingList {
+    display: inline-block;
+    text-align: left;
+    margin: 0.5rem auto;
+  }
+
   .educationList li {
     flex-direction: column;
     gap: 0.25rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
-  
+
   .year {
     margin-left: 0;
+  }
+
+  .educationList li::before {
+    position: static;
+    margin-bottom: 0.25rem;
   }
 }

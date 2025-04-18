@@ -3,7 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  padding-top:40rem; /* Increased from 4rem to 6rem */
+  padding-top:45rem; 
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -50,13 +50,71 @@
   font-weight: 500;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
-    padding-top: 5rem; /* Adjusted for mobile */
+    padding-top: 5rem;
+    gap: 1rem;
+  }
+
+  .mapSection {
+    height: 350px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .mainContent {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+    padding-top: 4.5rem;
+  }
+
+  .mapSection {
+    height: 300px;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .container {
+    padding-top: 4rem;
+  }
+
+  .mapSection {
+    height: 200px;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr 1fr; /* Keep two columns in landscape */
   }
 }
