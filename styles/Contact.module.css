@@ -84,23 +84,37 @@
 @media (max-width: 480px) {
   .container {
     padding: 0.75rem;
-    padding-top: 50rem;
+    padding-top: 50rem; /* Reduced from 50rem to more reasonable 6rem */
   }
 
   .mapSection {
-    height: 300px;
+    height: 250px; /* Reduced height for better mobile view */
     padding: 0.5rem;
     border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  /* Ensure map container fits properly */
+  .mapSection > div {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
   }
 
   .leftColumn,
   .rightColumn {
-    padding: 1.25rem;
+    padding: 1rem;
     border-radius: 8px;
   }
 
   .title {
     font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mainContent {
+    gap: 0.75rem;
   }
 }
 

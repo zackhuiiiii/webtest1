@@ -43,30 +43,46 @@
   border-radius: 12px;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .mapContainer {
     height: 350px;
   }
 
   .map {
-    display: none;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
   }
 
-  .mobileMessage {
-    display: flex;
-  }
-
-  .statsOverlay {
-    display: none;
+  .map > svg {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
   .mapContainer {
     height: 300px;
+    margin: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .map {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .statsOverlay {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
+/* Landscape mode */
 @media screen and (orientation: landscape) and (max-height: 500px) {
   .mapContainer {
     height: 200px;
