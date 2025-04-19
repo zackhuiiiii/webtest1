@@ -54,7 +54,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
-    padding-top: 10rem;
+    padding-top: 5rem;
     gap: 1rem;
   }
 
@@ -84,7 +84,7 @@
 @media (max-width: 480px) {
   .container {
     padding: 0.75rem;
-    padding-top: 4.5rem;
+    padding-top: 50rem;
   }
 
   .mapSection {
@@ -107,7 +107,7 @@
 /* Landscape mode */
 @media screen and (orientation: landscape) and (max-height: 500px) {
   .container {
-    padding-top: 4rem;
+    padding-top: 10rem;
   }
 
   .mapSection {
