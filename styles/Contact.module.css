@@ -54,7 +54,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
-    padding-top: 60rem;
+    padding-top: 5rem;
     gap: 1rem;
   }
 
@@ -95,7 +95,7 @@
 
   .leftColumn,
   .rightColumn {
-    padding: 1.25rem;
+    padding: 3rem;
     border-radius: 8px;
   }
 
