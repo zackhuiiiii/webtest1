@@ -17,7 +17,7 @@ const Titlebar = () => {
           <p>Home</p>
         </Link>
         <Link href="/about">
-          <p>About Me</p>
+          <p>AboutMe</p>
         </Link>
         <Link href="/publications">
           <p>Publications</p>
