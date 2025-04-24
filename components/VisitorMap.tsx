@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { supabase } from '@/lib/supabaseClient';
 import {
   ComposableMap,
   Geographies,
@@ -12,7 +13,7 @@ const geoUrl = "/world-110m.json";
 
 interface Visitor {
   coordinates: [number, number];
-  timestamp: number;
+  timestamp: string;
 }
 
 interface LocationDensity {
@@ -53,39 +54,61 @@ const VisitorMap = () => {
     return { radius, color };
   };
 
+  const fetchVisitors = async () => {
+    const { data: visitors, error } = await supabase
+      .from('visitors')
+      .select('*');
+
+      if (error) {
+        console.error('Supabase fetch error:', error);
+        return;
+      }
+      console.log('Fetched visitors:', visitors); // Check fetched data
+      setTotalVisitors(visitors.length);
+      setVisitorDensity(calculateDensity(visitors));
+    };
+
   const trackVisitor = async () => {
     try {
       const response = await fetch('https://ipapi.co/json/');
       const data = await response.json();
+      console.log('IP location:', data);
       
-      const newVisitor: Visitor = {
-        coordinates: [data.longitude, data.latitude],
-        timestamp: Date.now()
-      };
-
-      const existingVisitors = JSON.parse(localStorage.getItem('visitors') || '[]');
-      const updatedVisitors = [...existingVisitors, newVisitor];
-      localStorage.setItem('visitors', JSON.stringify(updatedVisitors));
-
-      setTotalVisitors(updatedVisitors.length);
-      setVisitorDensity(calculateDensity(updatedVisitors));
-    } catch (error) {
-      console.error('Error tracking visitor:', error);
-    }
-  };
-
-  useEffect(() => {
-    const loadVisitors = () => {
-      const saved = localStorage.getItem('visitors');
-      if (saved) {
-        const parsedVisitors = JSON.parse(saved);
-        setTotalVisitors(parsedVisitors.length);
-        setVisitorDensity(calculateDensity(parsedVisitors));
+      const { error } = await supabase
+        .from('visitors')
+        .insert([{
+          coordinates: [data.longitude, data.latitude],
+          timestamp: new Date().toISOString()
+        }]);
+        if (error) {
+          console.error('Supabase insert error:', error);
+          return;
+        }
+        console.log('Successfully added visitor'); // Check insert success
+        fetchVisitors();
+      } catch (error) {
+        console.error('Error tracking visitor:', error);
       }
     };
 
-    loadVisitors();
+  useEffect(() => {
+    fetchVisitors();
     trackVisitor();
+
+    // Subscribe to realtime changes
+    const subscription = supabase
+      .channel('visitors')
+      .on('postgres_changes', 
+        { event: 'INSERT', schema: 'public', table: 'visitors' },
+        () => {
+          fetchVisitors();
+        }
+      )
+      .subscribe();
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
   return (
@@ -149,7 +172,9 @@ const VisitorMap = () => {
           </ZoomableGroup>
         </ComposableMap>
       </div>
-      
+      <div className={styles.mobileMessage}>
+        <p>Please visit on desktop to view the interactive visitor map.</p>
+      </div>
     </div>
   );
 };
