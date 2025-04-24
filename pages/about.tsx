@@ -91,9 +91,9 @@ const AboutPage = () => {
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Teaching</h2>
             <ul className={styles.teachingList}>
-              <li>Teaching Assistant for Columbia COMS 6111 Advance Database</li>
+              <li>Teaching Assistant for Columbia COMS 6111, Advance Database</li>
               <li>Teaching Assistant for Columbia QMSS 5073, Machine Learning for Social Science</li>
-              <li>Teaching Assistant for BU CS CS330 Analysis of Algorithms</li>
+              <li>Teaching Assistant for BU CS CS330, Analysis of Algorithms</li>
             </ul>
           </section>
 
