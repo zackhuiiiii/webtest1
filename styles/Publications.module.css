@@ -99,6 +99,8 @@
   color: white;
 }
 
+
+
 .badge[data-conf="IJPRAI"] {
   background: #3498DB;
   color: white;
@@ -111,6 +113,11 @@
 
 .badge[data-conf="ACCTCS"] {
   background: #E74C3C;
+  color: white;
+}
+
+.badge[data-conf="ICML"] {
+  background: #922115;
   color: white;
 }
 
