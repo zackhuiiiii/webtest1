@@ -66,16 +66,19 @@ export default function PublicationsPage({ publications = [] }: PublicationsPage
             <div className={styles.publicationInfo}>
                 <h2 className={styles.publicationTitle}>{pub.title}</h2>
                 <p className={styles.authors}>
-                    {pub.authors.map((author, index) => (
-                    <span key={index}>
-                        {author === "Zheng Hui" ? (
-                        <span className={styles.highlightedAuthor}>{author}</span>
+                  {pub.authors.map((author, index) => {
+                    const isZhengHui = author === "Zheng Hui" || author === "Zheng Hui*";
+                    return (
+                      <span key={index}>
+                        {isZhengHui ? (
+                          <span className={styles.highlightedAuthor}>{author}</span>
                         ) : (
-                        author
+                          author
                         )}
                         {index < pub.authors.length - 1 ? ', ' : ''}
-                    </span>
-                    ))}
+                      </span>
+                    );
+                  })}
                 </p>
                 <p className={styles.venue}>{pub.conference}</p>
 
