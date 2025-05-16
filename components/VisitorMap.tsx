@@ -45,7 +45,7 @@ const VisitorMap = () => {
   };
 
   const getMarkerProps = (count: number) => {
-    const radius = Math.min(4 + (count * 2), 12);
+    const radius = Math.min(1 + (count * 2), 3);
     let color;
     if (count >= 300) color = "#FF0000";      // Red for high density
     else if (count >= 100) color = "#FFA500";   // Orange for medium density
@@ -150,22 +150,22 @@ const VisitorMap = () => {
                     r={radius}
                     fill={color}
                     fillOpacity={0.8}
-                    strokeWidth={2}
+                    strokeWidth={1}
                     stroke="#fff"
                   />
-                  {location.count > 1 && (
+                  {/* {location.count > 1 && (
                     <text
                       textAnchor="middle"
-                      y={4}
+                      y={5}
                       style={{
                         fontFamily: "system-ui",
-                        fontSize: "8px",
+                        fontSize: "3px",
                         fill: "#fff"
                       }}
                     >
                       {location.count}
                     </text>
-                  )}
+                  )} */}
                 </Marker>
               );
             })}
