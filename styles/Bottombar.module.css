@@ -1,12 +1,13 @@
 .bottomBar {
+  background: var(--bottombar-bg);
   height: 25px;
-  background: var(--bottom-bar-bg);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-top: 1px solid var(--bottombar-border);
+  color: rgb(225, 228, 232);
   padding: 0 0.5rem;
-  font-size: 0.85rem;
-  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
 }
 
 .container {
