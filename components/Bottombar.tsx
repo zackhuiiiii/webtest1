@@ -44,7 +44,7 @@ const Bottombar = () => {
           <p>Heavily modified by Zack Hui</p>
         </div>
         <div className={styles.section}>
-          <p>Last updated: April, 2025</p>
+          <p>Last updated: May, 2025</p>
         </div>
       </div>
 
