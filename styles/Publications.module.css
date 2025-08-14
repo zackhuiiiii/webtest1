@@ -126,9 +126,14 @@
   color: white;
 }
 
-.badge[data-conf="WWW"] {
+.badge[data-conf="KDD"] {
   background: #736fa3;
-  color: black;
+  color:  white;
+}
+
+.badge[data-conf="NLP4PI"] {
+  background: #F39C12;
+  color:  white;
 }
 
 .badge[data-conf="ACL"] {
