@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div className={styles.aboutContent}>
           <section className={styles.section}>
             <p className={styles.paragraph}>
-              Hey! I&apos;m Zack, a PhD student at the{' '} 
+              Hey! I&apos;m Zack, a second-year PhD student at the{' '} 
                <a href="https://ltl.mmll.cam.ac.uk" target="_blank" rel="noopener noreferrer" className={styles.link}>
               Language Technology Lab 
             </a> at the University of Cambridge, 
