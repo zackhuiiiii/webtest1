@@ -37,8 +37,8 @@ const AboutPage = () => {
             <p className={styles.paragraph}>
             Before starting my PhD, I spent a year as a researcher at 
             Microsoft Research, where I worked on the Responsible AI team developing alignment 
-            and safety methods for both vision-language models and deployed LLM systems. 
-            Prior to that, I completed a Master&apos;s in Computer 
+            and safety methods for both vision-language models and deployed LLM systems. I&apos;ve also interned at Microsoft Research, Roblox, and Intel.
+            I completed a Master&apos;s in Computer 
             Science at Columbia University, advised by Prof.{' '} 
                <a href="https://www.cs.columbia.edu/~jrk/" target="_blank" rel="noopener noreferrer" className={styles.link}>
               John Kender
