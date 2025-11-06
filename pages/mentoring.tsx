@@ -30,7 +30,7 @@ const MentoringPage = () => {
             <p className={styles.indent}>
               <span className={styles.key}>commitment</span>:{' '}
               <span className={styles.string}>
-                &quot;Devoting half a day every two weeks to mentor students&quot;
+                &quot;Devoting 2 hours every two weeks to mentor students&quot;
               </span>,
             </p>
             <p className={styles.indent}>
