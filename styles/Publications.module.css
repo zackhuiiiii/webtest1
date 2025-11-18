@@ -74,10 +74,6 @@
   color: white;
 }
 
-.badge[data-conf="NAACL"] {
-  background: #4ECDC4;
-  color: white;
-}
 
 .badge[data-conf="COLING"] {
   background: #45B7D1;
@@ -136,7 +132,12 @@
   color:  white;
 }
 
-.badge[data-conf="ACL"] {
+.badge[data-conf="ACL"],
+.badge[data-conf="acl"],
+.badge[data-conf="EACL"],
+.badge[data-conf="NAACL"],
+.badge[data-conf="naacl"],
+.badge[data-conf="eacl"] {
   background: #8E44AD;
   color: white;
 }
