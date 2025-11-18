@@ -1,3 +1,39 @@
+@misc{hui2025privacypadreinforcementlearningframework,
+      title={PrivacyPAD: A Reinforcement Learning Framework for Dynamic Privacy-Aware Delegation}, 
+      author={Zheng Hui and Yijiang River Dong and Sanhanat Sivapiromrat and Ehsan Shareghi and Nigel Collier},
+      abbr={Pre-print},
+      year={2025},
+      eprint={2510.16054},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      preview={privacypad.png},
+      abstract ={When users submit queries to Large Language Models (LLMs), their prompts can often contain sensitive data, forcing a difficult choice: Send the query to a powerful proprietary LLM providers to achieving state-of-the-art performance and risk data exposure, or relying on smaller, local models guarantees data privacy but often results in a degradation of task performance. Prior approaches have relied on static pipelines that use LLM rewriting, which shatters linguistic coherence and indiscriminately removes privacy-sensitive information, including task-critical content. We reformulate this challenge (Privacy-Conscious Delegation) as a sequential decision-making problem and introduce a novel reinforcement learning (RL) framework called PrivacyPAD to solve it. Our framework trains an agent to dynamically route text chunks, learning a policy that optimally balances the trade-off between privacy leakage and task performance. It implicitly distinguishes between replaceable Personally Identifiable Information (PII) (which it shields locally) and task-critical PII (which it strategically sends to the remote model for maximal utility). To validate our approach in complex scenarios, we also introduce a new medical dataset with high PII density. Our framework achieves a new state-of-the-art on the privacy-utility frontier, demonstrating the necessity of learned, adaptive policies for deploying LLMs in sensitive environments.},
+      pdf={https://arxiv.org/abs/2510.16054}, 
+}
+
+@article{shirkavand2025catalog,
+  title={Catalog-Native LLM: Speaking Item-ID Dialect with Less Entanglement for Recommendation},
+  author={Shirkavand, Reza and Wei, Xiaokai and Wang, Chen and Hui, Zheng and Huang, Heng and Gong, Michelle},
+  abbr={Pre-print},
+  journal={arXiv preprint arXiv:2510.05125},
+  preview={idiomoe.png},
+  abstract ={While collaborative filtering delivers predictive accuracy and efficiency, and Large Language Models (LLMs) enable expressive and generalizable reasoning, modern recommendation systems must bring these strengths together. Growing user expectations, such as natural-language queries and transparent explanations, further highlight the need for a unified approach. However, doing so is nontrivial. Collaborative signals are often token-efficient but semantically opaque, while LLMs are semantically rich but struggle to model implicit user preferences when trained only on textual inputs. This paper introduces Item-ID + Oral-language Mixture-of-Experts Language Model (IDIOMoE), which treats item interaction histories as a native dialect within the language space, enabling collaborative signals to be understood in the same way as natural language. By splitting the Feed Forward Network of each block of a pretrained LLM into a separate text expert and an item expert with token-type gating, our method avoids destructive interference between text and catalog modalities. IDIOMoE demonstrates strong recommendation performance across both public and proprietary datasets, while preserving the text understanding of the pretrained model.},
+  pdf={https://arxiv.org/abs/2510.05125}
+  year={2025}
+}
+
+@misc{liu2025mindmachinesurveyincorporating,
+      title={The Mind in the Machine: A Survey of Incorporating Psychological Theories in LLMs}, 
+      author={Zizhou Liu* and Ziwei Gong* and Lin Ai* and Zheng Hui* and Run Chen* and Colin Wayne Leach and Michelle R. Greene and Julia Hirschberg},
+      year={2025},
+      abbr={EACL},
+      eprint={2505.00003},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      preview={psych_survey.png},
+      abstract ={Psychological insights have long shaped pivotal NLP breakthroughs, including the cognitive underpinnings of attention mechanisms, formative reinforcement learning, and Theory of Mind-inspired social modeling. As Large Language Models (LLMs) continue to grow in scale and complexity, there is a rising consensus that psychology is essential for capturing human-like cognition, behavior, and interaction. This paper reviews how psychological theories can inform and enhance stages of LLM development, including data, pre-training, post-training, and evaluation\&application. Our survey integrates insights from cognitive, developmental, behavioral, social, personality psychology, and psycholinguistics. Our analysis highlights current trends and gaps in how psychological theories are applied. By examining both cross-domain connections and points of tension, we aim to bridge disciplinary divides and promote more thoughtful integration of psychology into future NLP research.},
+      pdf={https://arxiv.org/abs/2505.00003}
+}
 
 @article{hui2025trident,
   title={TRIDENT: Benchmarking LLM Safety in Finance, Medicine, and Law},
@@ -37,18 +73,7 @@
 }
 
 
-@misc{liu2025mindmachinesurveyincorporating,
-      title={The Mind in the Machine: A Survey of Incorporating Psychological Theories in LLMs}, 
-      author={Zizhou Liu* and Ziwei Gong* and Lin Ai* and Zheng Hui* and Run Chen* and Colin Wayne Leach and Michelle R. Greene and Julia Hirschberg},
-      year={2025},
-      abbr={Pre-print},
-      eprint={2505.00003},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      preview={psych_survey.png},
-      abstract ={Psychological insights have long shaped pivotal NLP breakthroughs, including the cognitive underpinnings of attention mechanisms, formative reinforcement learning, and Theory of Mind-inspired social modeling. As Large Language Models (LLMs) continue to grow in scale and complexity, there is a rising consensus that psychology is essential for capturing human-like cognition, behavior, and interaction. This paper reviews how psychological theories can inform and enhance stages of LLM development, including data, pre-training, post-training, and evaluation\&application. Our survey integrates insights from cognitive, developmental, behavioral, social, personality psychology, and psycholinguistics. Our analysis highlights current trends and gaps in how psychological theories are applied. By examining both cross-domain connections and points of tension, we aim to bridge disciplinary divides and promote more thoughtful integration of psychology into future NLP research.},
-      pdf={https://arxiv.org/abs/2505.00003}
-}
+
 
 @article{hui2025winclick,
   title={WinClick: GUI Grounding with Multimodal Large Language Models},
