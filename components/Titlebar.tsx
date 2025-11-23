@@ -22,7 +22,9 @@ const Titlebar = () => {
         <Link href="/publications">
           <p>Publications</p>
         </Link>
-        
+        <Link href="/blog">
+          <p>Blog</p>
+        </Link>
         <Link href="/github">
           <p>GitHub</p>
         </Link>

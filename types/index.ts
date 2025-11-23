@@ -35,3 +35,12 @@ export interface User {
   public_repos: number;
   followers: number;
 }
+
+export interface Blog {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  date: string;
+}
