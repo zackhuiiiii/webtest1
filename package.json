@@ -20,7 +20,7 @@
     "bibtex-parse": "^2.1.0",
     "bibtex-parse-js": "^0.0.24",
     "leaflet": "^1.9.4",
-    "next": "^15.2.3",
+    "next": "15.3.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-github-calendar": "^4.5.6",
