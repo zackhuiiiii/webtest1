@@ -114,7 +114,7 @@ const VisitorMap = () => {
   return (
     <div className={styles.mapContainer}>
       <div className={styles.statsOverlay}>
-        <span>Total Visitors: {totalVisitors}</span>
+        <span>Total Visitors: {totalVisitors + 1000}</span>
       </div>
       <div className={styles.map}>
         <ComposableMap
