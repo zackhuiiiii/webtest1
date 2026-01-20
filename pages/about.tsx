@@ -29,9 +29,18 @@ const AboutPage = () => {
             methods for aligning LLM behavior with human preferences, (2) building safe LLM agents 
             in open-ended environments, (3) robustness and jailbreak prevention, and (4) 
             using synthetic data and feedback to improve alignment.
+            </p>
 
-            
-
+            <p className={styles.paragraph}>
+            I am currently a{' '}
+            <a href="https://sparai.org/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              SPAR Fellow
+            </a> and a{' '}
+            <a href="https://www.pivotal-research.org/fellowship" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              Pivotal Fellow
+            </a>. My research has been generously 
+            supported by Microsoft and Roblox, with additional study and compute credits provided 
+            by Google and OpenAI.
             </p>
 
             <p className={styles.paragraph}>
@@ -83,8 +92,8 @@ const AboutPage = () => {
             <h2 className={styles.sectionTitle}>Professional Service</h2>
             <p className={styles.paragraph}>
               <strong>Program Committee Member/Reviewer:</strong>{' '}
-              COLM (2025), ICLR (2024-2025), ACL (2024-2025), EMNLP (2023,2025), 
-              NeurIPS (2024), KDD (2024), EACL (2023), AACL-IJCNLP(2022)
+              COLM (2025,2026), ICLR (2024-2026), ACL (2024-2026), EMNLP (2023,2025,2026), 
+              NeurIPS (2024,2026), KDD (2024), EACL (2023,2026), AACL-IJCNLP(2022)
             </p>
           </section>
 

@@ -1,0 +1,280 @@
+.container {
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  color: var(--text-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--accent-color) 0%, #0070f3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.timeline {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, 
+    var(--accent-color) 0%, 
+    #0070f3 50%, 
+    var(--accent-color) 100%);
+  border-radius: 2px;
+}
+
+.awardCard {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.awardCard::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 2rem;
+  width: 12px;
+  height: 12px;
+  background: var(--bg-color);
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.awardCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 112, 243, 0.15);
+  border-color: var(--accent-color);
+}
+
+.awardCard:hover::before {
+  background: var(--accent-color);
+  transform: scale(1.3);
+}
+
+.awardCard.highlight {
+  background: linear-gradient(135deg, 
+    rgba(0, 112, 243, 0.05) 0%, 
+    rgba(100, 100, 255, 0.05) 100%);
+  border-color: rgba(0, 112, 243, 0.3);
+}
+
+.awardCard.highlight::before {
+  border-color: #0070f3;
+  background: #0070f3;
+}
+
+.awardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.awardTitleSection {
+  flex: 1;
+}
+
+.awardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.awardTitleLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.awardTitleLink:hover .awardTitle {
+  color: var(--accent-color);
+}
+
+.externalIcon {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-size: 0.9em;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.awardTitleLink:hover .externalIcon {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.awardDescription {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.awardDate {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 112, 243, 0.1);
+  border-radius: 6px;
+}
+
+.awardDivider {
+  height: 0;
+  margin-top: 0;
+  border: none;
+}
+
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.statCard {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 112, 243, 0.15);
+  border-color: var(--accent-color);
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    width: 2px;
+  }
+
+  .awardCard {
+    padding: 1.25rem;
+  }
+
+  .awardCard::before {
+    left: -1.85rem;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+
+  .awardHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .awardTitle {
+    font-size: 1.1rem;
+  }
+
+  .awardDate {
+    align-self: flex-start;
+  }
+
+  .statsSection {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .statCard {
+    padding: 1.25rem;
+  }
+
+  .statNumber {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .awardTitle {
+    font-size: 1rem;
+  }
+
+  .awardDescription {
+    font-size: 0.9rem;
+  }
+}

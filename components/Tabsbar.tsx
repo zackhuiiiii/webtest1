@@ -19,6 +19,7 @@ const Tabsbar = () => {
         <Tab icon="/logos/react_icon.svg" filename="Home" path="/" />
         <Tab icon="/logos/html_icon.svg" filename="AboutMe" path="/about" />
         <Tab icon="/logos/json_icon.svg" filename="Publications" path="/publications" />
+        <Tab icon="/logos/js_icon.svg" filename="Awards" path="/awards" />
         <Tab icon="/logos/markdown_icon.svg" filename="Blog" path="/blog" />
         <Tab icon="/logos/markdown_icon.svg" filename="GitHub" path="/github" />
         <Tab icon="/logos/mentoring_icon.svg" filename="Mentoring" path="/mentoring" />
