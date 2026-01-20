@@ -38,7 +38,7 @@ const AboutPage = () => {
             </a> and a{' '}
             <a href="https://www.pivotal-research.org/fellowship" target="_blank" rel="noopener noreferrer" className={styles.link}>
               Pivotal Fellow
-            </a>. My research has been generously 
+            </a>. My PhD has been generously 
             supported by Microsoft and Roblox, with additional study and compute credits provided 
             by Google and OpenAI.
             </p>
