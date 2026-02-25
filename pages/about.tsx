@@ -92,7 +92,7 @@ const AboutPage = () => {
             <h2 className={styles.sectionTitle}>Professional Service</h2>
             <p className={styles.paragraph}>
               <strong>Program Committee Member/Reviewer:</strong>{' '}
-              COLM (2025,2026), ICLR (2024-2026), ACL (2024-2026), EMNLP (2023,2025,2026), 
+              COLM (2025-current), ICLR (2024-current), ACL (2024-current), EMNLP (2023,2025-current), 
               NeurIPS (2024,2026), KDD (2024), EACL (2023,2026), AACL-IJCNLP(2022)
             </p>
           </section>
@@ -100,7 +100,7 @@ const AboutPage = () => {
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Teaching</h2>
             <ul className={styles.teachingList}>
-              <li>Teaching Assistant for Columbia COMS 6111, Advance Database</li>
+              <li>Head Teaching Assistant for Columbia COMS 6111, Advance Database</li>
               <li>Teaching Assistant for Columbia QMSS 5073, Machine Learning for Social Science</li>
               <li>Teaching Assistant for BU CS CS330, Analysis of Algorithms</li>
             </ul>

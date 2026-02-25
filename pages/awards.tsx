@@ -105,7 +105,7 @@ const AwardsPage = () => {
             <div className={styles.statLabel}>Total Awards</div>
           </div>
           <div className={styles.statCard}>
-            <div className={styles.statNumber}>$16,500+</div>
+            <div className={styles.statNumber}>$276,500+</div>
             <div className={styles.statLabel}>Research Funding</div>
           </div>
           <div className={styles.statCard}>
