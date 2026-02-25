@@ -117,6 +117,16 @@
   color: white;
 }
 
+.badge[data-conf="ICLR"] {
+  background: #922115;
+  color: white;
+}
+
+.badge[data-conf="NeurIPS"] {
+  background: #922115;
+  color: white;
+}
+
 .badge[data-conf="EP"] {
   background: #2ECC71;
   color: white;
