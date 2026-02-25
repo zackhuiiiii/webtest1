@@ -9,6 +9,14 @@ import { SiNextdotjs } from 'react-icons/si';
 import styles from '@/styles/Bottombar.module.css';
 
 const Bottombar = () => {
+  // Generate current month and year dynamically
+  const getLastUpdated = () => {
+    const date = new Date();
+    const month = date.toLocaleString('en-US', { month: 'long' });
+    const year = date.getFullYear();
+    return `${month}, ${year}`;
+  };
+
   return (
     <footer className={styles.bottomBar}>
       <div className={styles.container}>
@@ -26,7 +34,7 @@ const Bottombar = () => {
 
       <div className={styles.copyrightContainer}>
         <div className={styles.section}>
-          <p>©Copyright 2025 Zack Hui</p>
+          <p>©Copyright {new Date().getFullYear()} Zack Hui</p>
         </div>
         <div className={styles.section}>
           <p>Theme by{' '}
@@ -44,7 +52,7 @@ const Bottombar = () => {
           <p>Heavily modified by Zack Hui</p>
         </div>
         <div className={styles.section}>
-          <p>Last updated: May, 2025</p>
+          <p>Last updated: {getLastUpdated()}</p>
         </div>
       </div>
 
