@@ -32,7 +32,7 @@ const AboutPage = () => {
             </p>
 
             <p className={styles.paragraph}>
-            I am currently a{' '}
+            I am currently a PhD research intern at Google. I was a{' '}
             <a href="https://sparai.org/" target="_blank" rel="noopener noreferrer" className={styles.link}>
               SPAR Fellow
             </a> and a{' '}
