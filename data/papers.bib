@@ -1,8 +1,96 @@
+@misc{hui2026copyrightbench,
+      title={Agentic Evaluation of Copyright Law Compliance},
+      author={Zheng Hui and Doni Bloomfield and Noam Kolt},
+      abbr={ICML 2026},
+      topics={Agent, AI Safety},
+      note={Spotlight},
+      year={2026},
+      eprint={2607.21799},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      preview={copyrightbench.jpg},
+      abstract={Large language model (LLM) agents increasingly perform commercial tasks that involve retrieving external content such as images and, where appropriate, reproducing that content. LLM agents should comply with the law, including copyright law. Presently, however, we lack adequate frameworks to assess whether they do so in practice. To that end, we introduce Copyright-Bench, a benchmark designed to evaluate LLM agents' compliance with copyright law. Copyright-Bench is comprised of realistic commercial tasks---website development, merchandise design, and pitch deck production---that involve agents selecting between public-domain content (the use of which is legal) and copyrighted content (the use of which is infringing in this setting). The evaluation introduces prompt variations that simulate different user preferences, as well as time pressure. Comparing state-of-the-art LLM agents against a human baseline, we find that: (1) agents select copyrighted works despite the availability of public-domain alternatives; and (2) for open-weights models, violation rates increase in response to certain user preferences and simulated time pressure.},
+      pdf={https://arxiv.org/abs/2607.21799}
+}
+
+@misc{hui2026trident,
+      title={TRIDENT: Benchmarking LLM Safety in Finance, Medicine, and Law},
+      author={Zheng Hui and Yijiang River Dong and Ehsan Shareghi and Nigel Collier},
+      abbr={COLM 2026},
+      topics={AI Safety, Evaluation & Benchmarks},
+      year={2026},
+      eprint={2507.21134},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      preview={tridentb.png},
+      abstract={As large language models (LLMs) are increasingly deployed in high-risk domains such as law, finance, and medicine, systematically evaluating their domain-specific safety and compliance becomes critical. While prior work has largely focused on improving LLM performance in these domains, it has often neglected the evaluation of domain-specific safety risks. To bridge this gap, we first define domain-specific safety principles for LLMs based on the AMA Principles of Medical Ethics, the ABA Model Rules of Professional Conduct, and the CFA Institute Code of Ethics. Building on this foundation, we introduce Trident-Bench, a benchmark specifically targeting LLM safety in the legal, financial, and medical domains. We evaluated 19 general-purpose and domain-specialized models on Trident-Bench and show that it effectively reveals key safety gaps -- strong generalist models (e.g., GPT, Gemini) can meet basic expectations, whereas domain-specialized models often struggle with subtle ethical nuances. This highlights an urgent need for finer-grained domain-specific safety improvements. By introducing Trident-Bench, our work provides one of the first systematic resources for studying LLM safety in law and finance, and lays the groundwork for future research aimed at reducing the safety risks of deploying LLMs in professionally regulated fields.},
+      pdf={https://arxiv.org/abs/2507.21134}
+}
+
+@misc{zhou2026miscalibration,
+      title={Language-Dependent Miscalibration in Multilingual LLM Evaluators},
+      author={Ej Zhou and Lucas Resck and Zheng Hui* and Anna Korhonen*},
+      abbr={COLM 2026},
+      topics={Multilingual / Multimodal LM, AI Safety},
+      year={2026},
+      eprint={2607.14480},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      preview={miscalib.jpg},
+      abstract={Prompted LLM-as-a-Judge systems or trained reward models are typically validated using pairwise accuracy, under the assumption that high accuracy implies reliable and language-invariant evaluation. We demonstrate that multilingual LLM evaluators exhibit large, systematic, and statistically significant language-dependent bias in pointwise scoring. We show that this mismatch has concrete downstream consequences: threshold filtering can result in huge differences in acceptance rates.},
+      pdf={https://arxiv.org/abs/2607.14480}
+}
+
+@misc{zhang2026memorycd,
+      title={MemoryCD: Benchmarking Long-Context User Memory of LLM Agents for Lifelong Cross-Domain Personalization},
+      author={Weizhi Zhang and Xiaokai Wei and Wei-Chieh Huang and Zheng Hui and Chen Wang and Michelle Gong and Philip S. Yu},
+      abbr={Pre-print},
+      topics={Memory, Agent, Evaluation & Benchmarks},
+      year={2026},
+      eprint={2603.25973},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      preview={memorycd.jpg},
+      abstract={Recent advancements in Large Language Models (LLMs) have expanded context windows to million-token scales, yet benchmarks for evaluating memory remain limited to short-session synthetic dialogues. We introduce MemoryCD, the first large-scale, user-centric, cross-domain memory benchmark derived from lifelong real-world behaviors in the Amazon Review dataset. Unlike existing memory datasets that rely on scripted personas to generate synthetic user data, MemoryCD tracks authentic user interactions across years and multiple domains. We construct a multi-faceted long-context memory evaluation pipeline of 14 state-of-the-art LLM base models with 6 memory method baselines on 4 distinct personalization tasks over 12 diverse domains to evaluate an agent's ability to simulate real user behaviors in both single and cross-domain settings. Our analysis reveals that existing memory methods are far from user satisfaction in various domains, offering the first testbed for cross-domain life-long personalization evaluation.},
+      pdf={https://arxiv.org/abs/2603.25973}
+}
+
+@misc{huang2026agentmemory,
+      title={A Survey of Agent Memory in the Second Half: Towards Self-Evolving and Long-Horizon Agents},
+      author={Wei-Chieh Huang and Weizhi Zhang and Yueqing Liang and Yuanchen Bei and Yankai Chen and Tao Feng and Zhen Tan and Yu Wang and Zheng Hui and others},
+      abbr={TMLR 2026},
+      topics={Memory, Agent},
+      year={2026},
+      eprint={2602.06052},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      preview={memorysurvey.jpg},
+      abstract={Research in artificial intelligence is undergoing a paradigm shift from prioritizing model innovations and benchmark scores towards emphasizing problem definition and rigorous real-world evaluation. As the field enters the second half, the central challenge becomes real utility in long-horizon, dynamic, and user-dependent settings such as agentic coding, deep research, and computer use, where LLM-based agents face context explosion beyond fixed context windows and must continuously accumulate, manage, and selectively reuse large volumes of information across extended interactions. Memory, with hundreds of papers released in 2025, therefore emerges as the critical solution to fill the utility gap. Beyond serving as passive storage, memory is increasingly the substrate through which agents self-evolve. In this survey, we provide a unified view of foundation agent memory along three dimensions: memory substrate, cognitive mechanism, and memory subject. We then analyze how memory is operated under single- and multi-agent topologies and highlight learning policies over memory operations. Finally, we review evaluation benchmarks and metrics for assessing memory utility, and outline open challenges and future directions.},
+      pdf={https://arxiv.org/abs/2602.06052}
+}
+
+@misc{dong2026value,
+      title={Value of Information: A Framework for Human-Agent Communication},
+      author={Yijiang River Dong and Tiancheng Hu and Zheng Hui and Caiqi Zhang and Ivan Vulic and Andreea Bobu and Nigel Collier},
+      abbr={ACL 2026},
+      topics={Agent, Alignment},
+      note={Oral},
+      year={2026},
+      eprint={2601.06407},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      preview={voi.jpg},
+      abstract={Large Language Model (LLM) agents deployed for real-world tasks face a fundamental dilemma: user requests are underspecified, yet agents must decide whether to act on incomplete information or interrupt users for clarification. Existing approaches either rely on brittle confidence thresholds that require task-specific tuning, or fail to account for the varying stakes of different decisions. We introduce a decision-theoretic framework that resolves this trade-off through the Value of Information (VoI), enabling agents to dynamically weigh the expected utility gain from asking questions against the cognitive cost imposed on users. Our inference-time method requires no hyperparameter tuning and adapts seamlessly across contexts---from casual games to medical diagnosis. Experiments across four diverse domains (20 Questions, medical diagnosis, flight booking, and e-commerce) show that VoI consistently matches or exceeds the best manually-tuned baselines, achieving up to 1.36 utility points higher in high-cost settings. This work provides a parameter-free framework for adaptive agent communication that explicitly balances task risk, query ambiguity, and user effort.},
+      pdf={https://arxiv.org/abs/2601.06407}
+}
+
+
+
 @misc{hui2025privacypadreinforcementlearningframework,
-      title={Back to Author Console
-Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learning}, 
+      title={Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learning}, 
       author={Zheng Hui and Yijiang River Dong and Sanhanat Sivapiromrat and Ehsan Shareghi and Nigel Collier},
       abbr={ACL 2026},
+      topics={Post-training, Agent, AI Safety, Reinforcement Learning},
       year={2025},
       eprint={2510.16054},
       archivePrefix={arXiv},
@@ -16,6 +104,7 @@ Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learni
   title={Catalog-Native LLM: Speaking Item-ID Dialect with Less Entanglement for Recommendation},
   author={Shirkavand, Reza and Wei, Xiaokai and Wang, Chen and Hui, Zheng and Huang, Heng and Gong, Michelle},
   abbr={ICLR 2026},
+      topics={Modularity, Pre-training, Post-training},
   journal={arXiv preprint arXiv:2510.05125},
   preview={idiomoe.png},
   abstract ={While collaborative filtering delivers predictive accuracy and efficiency, and Large Language Models (LLMs) enable expressive and generalizable reasoning, modern recommendation systems must bring these strengths together. Growing user expectations, such as natural-language queries and transparent explanations, further highlight the need for a unified approach. However, doing so is nontrivial. Collaborative signals are often token-efficient but semantically opaque, while LLMs are semantically rich but struggle to model implicit user preferences when trained only on textual inputs. This paper introduces Item-ID + Oral-language Mixture-of-Experts Language Model (IDIOMoE), which treats item interaction histories as a native dialect within the language space, enabling collaborative signals to be understood in the same way as natural language. By splitting the Feed Forward Network of each block of a pretrained LLM into a separate text expert and an item expert with token-type gating, our method avoids destructive interference between text and catalog modalities. IDIOMoE demonstrates strong recommendation performance across both public and proprietary datasets, while preserving the text understanding of the pretrained model.},
@@ -28,6 +117,7 @@ Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learni
       author={Zheng Hui and Xiaokai Wei and Yexi Jiang and Kevin Gao and Chen Wang and Frank Ong and Se-eun Yoon and Rachit Pareek and Michelle Gong},
       year={2025},
       abbr={EACL 2026},
+      topics={Agent, AI Safety, Post-training},
       eprint={2504.20094},
       archivePrefix={arXiv},
       primaryClass={cs.IR},
@@ -41,6 +131,7 @@ Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learni
       author={Zizhou Liu* and Ziwei Gong* and Lin Ai* and Zheng Hui* and Run Chen* and Colin Wayne Leach and Michelle R. Greene and Julia Hirschberg},
       year={2025},
       abbr={EACL 2026},
+      topics={Post-training, Pre-training, Alignment},
       eprint={2505.00003},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
@@ -49,22 +140,12 @@ Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learni
       pdf={https://arxiv.org/abs/2505.00003}
 }
 
-@article{hui2025trident,
-  title={TRIDENT: Benchmarking LLM Safety in Finance, Medicine, and Law},
-  author={Hui, Zheng and Dong, Yijiang River and Shareghi, Ehsan and Collier, Nigel},
-  abbr={Pre-print},
-  journal={arXiv preprint arXiv:2507.21134},
-  preview={tridentb.png},
-  abstract ={As large language models (LLMs) are increasingly deployed in high-risk domains such as law, finance, and medicine, systematically evaluating their domain-specific safety and compliance becomes critical. While prior work has largely focused on improving LLM performance in these domains, it has often neglected the evaluation of domain-specific safety risks. To bridge this gap, we first define domain-specific safety principles for LLMs based on the AMA Principles of Medical Ethics, the ABA Model Rules of Professional Conduct, and the CFA Institute Code of Ethics. Building on this foundation, we introduce Trident-Bench, a benchmark specifically targeting LLM safety in the legal, financial, and medical domains. We evaluated 19 general-purpose and domain-specialized models on Trident-Bench and show that it effectively reveals key safety gaps -- strong generalist models (e.g., GPT, Gemini) can meet basic expectations, whereas domain-specialized models often struggle with subtle ethical nuances. This highlights an urgent need for finer-grained domain-specific safety improvements. By introducing Trident-Bench, our work provides one of the first systematic resources for studying LLM safety in law and finance, and lays the groundwork for future research aimed at reducing the safety risks of deploying LLMs in professionally regulated fields.}
-  pdf={https://arxiv.org/abs/2507.21134}
-  year={2025}
-}
-
 @inproceedings{hui2025cross,
   title={Cross-cultural Sentiment Analysis of Social Media Responses to a Sudden Crisis Event},
   author={Hui, Zheng and Xu, Zihang and Kender, John},
   booktitle={Proceedings of the Fourth Workshop on NLP for Positive Impact (NLP4PI)},
   abbr={NLP4PI 2025},
+      topics={Multilingual / Multimodal LM, Post-training},
   preview={cross.png},
   abstract ={Although the responses to events such as COVID-19 have been extensively studied, research on sudden crisis response in a multicultural context is still limited. In this paper, our contributions are 1) We examine cultural differences in social media posts related to such events in two different countries, specifically the United Kingdom lockdown of 2020-03-23 and the China Urumqi fire1 of 2022-11-24. 2) We extract the emotional polarity of tweets and weibos gathered temporally adjacent to those two events, by fine-tuning transformer-based language models for each language. We evaluate each model’s performance on 2 benchmarks, and show that, despite being trained on a relatively small amount of data, they exceed baseline accuracies. We find that in both events, the increase in negative responses is both dramatic and persistent, and does not return to baseline even after two weeks. Nevertheless, the Chinese dataset reflects, at the same time, positive responses to subsequent government action. Our study is one of the first to show how sudden crisis events can be used to explore affective reactions across cultures.}
   pdf={https://aclanthology.org/2025.nlp4pi-1.26/}
@@ -82,6 +163,8 @@ Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learni
   title={WinClick: GUI Grounding with Multimodal Large Language Models},
   author={Zheng Hui and Yinheng Li and Dan zhao and Tianyi Chen and Colby Banbury and Kazuhito Koishida},
   abbr={ACL 2025},
+      topics={Agent, Multilingual / Multimodal LM, LLM Synthetic Data, Post-training},
+      note={Oral},
   pdf={https://arxiv.org/abs/2503.04730},
   abstract ={Graphical User Interface (GUI) tasks are vital for automating workflows such as software testing, user interface navigation. For users, the GUI is the most intuitive platform for interacting with a computer. Previous work identified a key challenge in developing visual GUI agents: GUI grounding - the ability to accurately locate screen elements based on instructions. However, most existing GUI agents rely on structured data formats like DOM or HTML files in training or inferencing, which are inaccessible across all applications, particular in a general desktop environments such as Windows OS. To address this, we introduce WinClick, a novel visual GUI agent developed in Windows platform. WinClick leverages screenshots to detect actionable regions. To overcome the challenge of GUI grounding, we enhance WinClick with GUI grounding pre-training and propose an LLM-based method for aligning GUI grounding data. Additionally, we introduce WinSpot, the first comprehensive benchmark for GUI grounding on Windows. Our experiments demonstrate that WinClick, combined with GUI grounding pre-training, significantly outperforms existing baselines, offering a scalable solution for GUI automation in desktop environments.},
   preview={winclick.png},
@@ -94,6 +177,7 @@ Privacy-R1: Privacy-Aware Multi-LLM Agent Collaboration via Reinforcement Learni
   author={Rogerio Bonatti and Dan Zhao and Francesco Bonacci and Dillon Dupont and Sara Abdali and Yinheng Li and Yadong Lu and Justin Wagle and Kazuhito Koishida and Arthur Bucker and Lawrence Jang and Zheng Hui},
   booktitle={2025 International Conference on Machine Learning (ICML)},
   abbr={ICML 2025},
+      topics={Agent, Multilingual / Multimodal LM, Evaluation & Benchmarks},
   pdf={https://arxiv.org/abs/2409.08264},
   abstract={Large language models (LLMs) show remarkable potential to act as computer agents, enhancing human productivity and software accessibility in multi-modal tasks that require planning and reasoning. However, measuring agent performance in realistic environments remains a challenge since: (i) most benchmarks are limited to specific modalities or domains (e.g. text-only, web navigation, Q&A, coding) and (ii) full benchmark evaluations are slow (on order of magnitude of days) given the multi-step sequential nature of tasks. To address these challenges, we introduce the Windows Agent Arena: a reproducible, general environment focusing exclusively on the Windows operating system (OS) where agents can operate freely within a real Windows OS and use the same wide range of applications, tools, and web browsers available to human users when solving tasks. We adapt the OSWorld framework (Xie et al., 2024) to create 150+ diverse Windows tasks across representative domains that require agent abilities in planning, screen understanding, and tool usage. Our benchmark is scalable and can be seamlessly parallelized in Azure for a full benchmark evaluation in as little as 20 minutes. To demonstrate Windows Agent Arena's capabilities, we also introduce a new multi-modal agent, Navi. Our agent achieves a success rate of 19.5% in the Windows domain, compared to 74.5% performance of an unassisted human. Navi also demonstrates strong performance on another popular web-based benchmark, Mind2Web. We offer extensive quantitative and qualitative analysis of Navi's performance, and provide insights into the opportunities for future research in agent development and data generation using Windows Agent Arena.
 Webpage: https://microsoft.github.io/WindowsAgentArena
@@ -108,6 +192,7 @@ Code: https://github.com/microsoft/WindowsAgentArena},
    Ong, Frank and Gao, Kevin and Yu, Xiao and Hui, Zheng and Yoon, Se-eun and Yu, Philip and Gong, Michelle},
   journal={arXiv preprint arXiv:2502.06802},
   abbr={KDD 2025},
+      topics={LLM Synthetic Data},
   pdf={https://arxiv.org/pdf/2502.06802},
   abstract = {With the vast and dynamic user-generated content on Roblox, creating effective game recommendations requires a deep understanding of game content. Traditional recommendation models struggle with the inconsistent and sparse nature of game text features such as titles and descriptions. Recent advancements in large language models (LLMs) offer opportunities to enhance recommendation systems by analyzing in-game text data. This paper addresses two challenges: generating high-quality, structured text features for games without extensive human annotation, and validating these features to ensure they improve recommendation relevance. We propose an approach that extracts in-game text and uses LLMs to infer attributes such as genre and gameplay objectives from raw player interactions. Additionally, we introduce an LLM-based re-ranking mechanism to assess the effectiveness of the generated text features, enhancing personalization and user satisfaction. Beyond recommendations, our approach supports applications such as user engagement-based integrity detection, already deployed in production. This scalable framework demonstrates the potential of in-game text understanding to improve recommendation quality on Roblox and adapt recommendations to its unique, user-generated ecosystem.},
   preview={profile_gen_roblox.png},
@@ -121,6 +206,7 @@ Code: https://github.com/microsoft/WindowsAgentArena},
 title={Enhancing Multimodal Large Language Models Complex Reason via Similarity Computation}, 
 volume={39}, 
 abbr={AAAI 2025},
+      topics={Multilingual / Multimodal LM, Post-training},
 pdf={https://ojs.aaai.org/index.php/AAAI/article/view/33107}, 
 DOI={10.1609/aaai.v39i10.33107}, 
 abstract={Multimodal large language models have experienced rapid growth, and numerous different models have emerged. The interpretability of LVLMs remains an under-explored area. Especially when faced with more complex tasks such as chain-of-thought reasoning, its internal mechanisms still resemble a black box that is difficult to decipher. By studying the interaction and information flow between images and text, we noticed that in models such as LLaVA1.5, image tokens that are semantically related to text are more likely to have information flow convergence in the LLM decoding layer, and these image tokens receive higher attention scores. However, those image tokens that are less relevant to the text do not have information flow convergence, and they only get very small attention scores. To efficiently utilize the image information, we propose a new image token reduction method, Simignore, which aims to improve the complex reasoning ability of LVLMs by computing the similarity between image and text embeddings and ignoring image tokens that are irrelevant and unimportant to the text. Through extensive experiments, we demonstrate the effectiveness of our method for complex reasoning tasks.}, 
@@ -134,6 +220,7 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
       author={Zheng Hui and Zhaoxiao Guo and Hang Zhao and Juanyong Duan and Lin Ai and Yinheng Li and Julia Hirschberg and Congrui Huang},
       year={2025},
       abbr={Pre-print},
+      topics={LLM Synthetic Data, Post-training, AI Safety},
       eprint={2411.15175},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
@@ -147,6 +234,8 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
   author={Liu, Jiateng and Ai, Lin and Liu, Zizhou and Karisani, Payam and Hui, Zheng and Fung, May and Nakov, Preslav and Hirschberg, Julia and Ji, Heng},
   booktitle={Proceedings of the 31st International Conference on Computational Linguistics},
   abbr={COLING 2025},
+      topics={AI Safety, LLM Synthetic Data},
+      note={Oral},
   preview={propainsight.jpg},
   abstract = {Propaganda plays a critical role in shaping public opinion and fueling disinformation. While existing research primarily focuses on identifying propaganda techniques, it lacks the ability to capture the broader motives and the impacts of such content. To address these challenges, we introduce PropaInsight, a conceptual framework grounded in foundational social science research, which systematically dissects propaganda into techniques, arousal appeals, and underlying intent. PropaInsight offers a more granular understanding of how propaganda operates across different contexts. Additionally, we present PropaGaze, a novel dataset that combines human-annotated data with high-quality synthetic data generated through a meticulously designed pipeline. Our experiments show that off-the-shelf LLMs struggle with propaganda analysis, but PropaGaze significantly improves performance. Fine-tuned Llama-7B-Chat achieves 203.4{\%} higher text span IoU in technique identification and 66.2{\%} higher BertScore in appeal analysis compared to 1-shot GPT-4-Turbo. Moreover, PropaGaze complements limited human-annotated data in data-sparse and cross-domain scenarios, demonstrating its potential for comprehensive and generalizable propaganda analysis.},
   pdf={https://aclanthology.org/2025.coling-main.376/},
@@ -160,6 +249,8 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
     month = nov,
     year = "2024",
     abbr={EMNLP 2024},
+      topics={LLM Synthetic Data, AI Safety},
+      note={Oral},
     address = "Miami, Florida, USA",
     publisher = "Association for Computational Linguistics",
     pdf={https://aclanthology.org/2024.findings-emnlp.970/},
@@ -174,6 +265,7 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
   author={Ai, Lin and Hui, Zheng and Liu, Zizhou and Hirschberg, Julia},
   booktitle={In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
   abbr={EMNLP 2024},
+      topics={Post-training, Pre-training},
   preview={QASE.jpg},
   pdf={https://aclanthology.org/2024.emnlp-main.560.pdf},
   abstract = {Machine Reading Comprehension (MRC) poses a significant challenge in the field of Natural Language Processing (NLP). While mainstream MRC methods predominantly leverage extractive strategies using encoder-only models such as BERT, generative approaches face the issue of out-of-control generation -- a critical problem where answers generated are often incorrect, irrelevant, or unfaithful to the source text. To address these limitations in generative models for MRC, we introduce the Question-Attended Span Extraction (QASE) module. Integrated during the fine-tuning phase of pre-trained generative language models (PLMs), QASE significantly enhances their performance, allowing them to surpass the extractive capabilities of advanced Large Language Models (LLMs) such as GPT-4 in few-shot settings. Notably, these gains in performance do not come with an increase in computational demands. The efficacy of the QASE module has been rigorously tested across various datasets, consistently achieving or even surpassing state-of-the-art (SOTA) results, thereby bridging the gap between generative and extractive models in extractive MRC tasks.},
@@ -185,6 +277,7 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
 @inproceedings{ai2024defending,
   title={Defending Against Social Engineering Attacks in the Age of LLMs},
   abbr={EMNLP 2024},
+      topics={AI Safety, Alignment},
   author={Ai, Lin and Kumarage, Tharindu and Bhattacharjee, Amrita and Liu, Zizhou and Hui, Zheng and Davinroy, Michael and Cook, James and Cassani, Laura and Trapeznikov, Kirill and Kirchner, Matthias and others},
   booktitle={In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
   preview={defend_social.png},
@@ -210,10 +303,25 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
 
 
 
+@misc{wei2024autoprox,
+      title={Auto-Prox: Training-Free Vision Transformer Architecture Search via Automatic Proxy Discovery},
+      author={Zimian Wei and Lujun Li and Peijie Dong and Zheng Hui and Anggeng Li and Menglong Lu and Hengyue Pan and Zhiliang Tian and Dongsheng Li},
+      abbr={AAAI 2024},
+      topics={Modularity},
+      year={2024},
+      eprint={2312.09059},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      preview={autoprox.jpg},
+      abstract={The substantial success of Vision Transformer (ViT) in computer vision tasks is largely attributed to the architecture design. This underscores the necessity of efficient architecture search for designing better ViTs automatically. As training-based architecture search methods are computationally intensive, there is a growing interest in training-free methods that use zero-cost proxies to score ViTs. However, existing training-free approaches require expert knowledge to manually design specific zero-cost proxies. Moreover, these zero-cost proxies exhibit limitations to generalize across diverse domains. In this paper, we introduce Auto-Prox, an automatic proxy discovery framework, to address the problem. First, we build the ViT-Bench-101, which involves different ViT candidates and their actual performance on multiple datasets. Utilizing ViT-Bench-101, we can evaluate zero-cost proxies based on their score-accuracy correlation. Then, we represent zero-cost proxies with computation graphs and organize the zero-cost proxy search space with ViT statistics and primitive operations. To discover generic zero-cost proxies, we propose a joint correlation metric to evolve and mutate different zero-cost proxy candidates. We introduce an elitism-preserve strategy for search efficiency to achieve a better trade-off between exploitation and exploration. Based on the discovered zero-cost proxy, we conduct a ViT architecture search in a training-free manner. Extensive experiments demonstrate that our method generalizes well to different datasets and achieves state-of-the-art results both in ranking correlation and final accuracy.},
+      pdf={https://arxiv.org/abs/2312.09059}
+}
+
 @article{ding2024ll,
   title={LL-Diff: Low-Light Image Enhancement Utilizing Langevin Sampling Diffusion},
   author={Ding, Boren and Zhang, Xiaofeng and Yu, Zekun and Hui, Zheng},
   abbr={IJPRAI 2024},
+      topics={Multilingual / Multimodal LM},
   booktitle={International Journal of Pattern Recognition and Artificial Intelligence},
   volume={38},
   number={13},
@@ -229,6 +337,7 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
   title={TweetIntent@ Crisis: A Dataset Revealing Narratives of Both Sides in the Russia-Ukraine Crisis},
   author={Ai, Lin and Gupta, Sameer and Oak, Shreya and Hui, Zheng and Liu, Zizhou and Hirschberg, Julia},
   abbr={ICWSM 2024},
+      topics={LLM Synthetic Data},
   booktitle={Proceedings of the International AAAI Conference on Web and Social Media},
   volume={18},
   pages={1872--1887},
@@ -242,6 +351,7 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
   author={Li, Yawei and Zhang, Yulun and Timofte, Radu and Van Gool, Luc and Yu, Lei and Li, Youwei and Li, Xinpeng and Jiang, Ting and Wu, Qi and Han, Mingyan and others},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   abbr={CVPR 2023},
+      topics={Multilingual / Multimodal LM},
   preview={cvpr23.png},
   pages={1922--1960},
   year={2023}
@@ -252,6 +362,7 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
   title={Federation learning optimization using distillation},
   author={Hui, Zheng and Chen, Dingjie and Xu, Zihang},
   abbr={ACCTCS 2021},
+      topics={Modularity},
   booktitle={2021 Asia-Pacific Conference on Communications Technology and Computer Science (ACCTCS)},
   pages={25--28},
   year={2021},
@@ -265,6 +376,7 @@ booktitle={Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 3
   title={Unveiling tropospheric ozone by the traditional atmospheric model and machine learning, and their comparison: A case study in hangzhou, China},
   author={Feng, Rui and Zheng, Hui and Zhang, An-ran and Huang, Chong and Gao, Han and Ma, Yu-cheng},
   abbr={EP 2019},
+      topics={AI for Science},
   booktitle={Environmental pollution, Volume 252, 366--378, 2019},
   volume={252},
   pages={366--378},

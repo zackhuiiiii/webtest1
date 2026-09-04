@@ -12,7 +12,8 @@ export interface Publication {
   pdf?: string;
   preview?: string;
   abbr?: string;
-  address?: string;
+  note?: string;
+  topics: string[];
 }
 
 function parseField(entry: string, fieldName: string): string {
@@ -47,7 +48,11 @@ export function parseBibFile(): Publication[] {
         pdf: parseField(entry, 'pdf'),
         preview: parseField(entry, 'preview'),
         abbr: parseField(entry, 'abbr'),
-        address: parseField(entry, 'address')
+        note: parseField(entry, 'note'),
+        topics: parseField(entry, 'topics')
+          .split(/[,，]/)
+          .map(topic => topic.trim())
+          .filter(Boolean),
       };
     })
     .filter(pub => pub.id && pub.title); // Filter out any malformed entries

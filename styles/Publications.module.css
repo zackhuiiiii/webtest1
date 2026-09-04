@@ -20,12 +20,50 @@
 .searchInput {
   width: 100%;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border: 1px solid #333;
   border-radius: 8px;
   background: #1a1a1a;
   color: #fff;
   font-size: 1rem;
+}
+
+.topicBar,
+.cardTopics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topicBar {
+  margin-bottom: 2rem;
+}
+
+.cardTopics {
+  margin-bottom: 0.25rem;
+}
+
+.topicChip {
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #3a3a3a;
+  background: #242424;
+  color: #cfcfcf;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topicChip:hover {
+  border-color: #5a5a5a;
+  color: #fff;
+}
+
+.topicChipActive {
+  background: #3ea8d6;
+  border-color: #3ea8d6;
+  color: #0b0b0b;
+  font-weight: 600;
 }
 
 .publicationsList {
@@ -35,9 +73,11 @@
 }
 
 .publicationCard {
+  position: relative;
   background: #1a1a1a;
   border-radius: 12px;
   padding: 1.5rem;
+  padding-bottom: 2.85rem;
   transition: transform 0.2s ease;
 }
 
@@ -66,6 +106,32 @@
   font-size: 0.875rem;
   font-weight: 500;
   width: fit-content;
+}
+
+.awardMark {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(232, 213, 163, 0.12);
+  border: 1px solid rgba(232, 213, 163, 0.28);
+  color: #e8d5a3;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.awardMark[data-award="Oral"] {
+  background: rgba(147, 197, 253, 0.12);
+  border-color: rgba(147, 197, 253, 0.3);
+  color: #93c5fd;
 }
 
 /* Conference-specific badge colors */
@@ -112,6 +178,11 @@
   color: white;
 }
 
+.badge[data-conf="COLM"] {
+  background: #1d4ed8;
+  color: white;
+}
+
 .badge[data-conf="ICML"] {
   background: #922115;
   color: white;
@@ -119,6 +190,11 @@
 
 .badge[data-conf="ICLR"] {
   background: #922115;
+  color: white;
+}
+
+.badge[data-conf="TMLR"] {
+  background: #0f766e;
   color: white;
 }
 
@@ -313,6 +389,16 @@
   .searchInput {
     font-size: 16px; /* Prevents zoom on iOS */
     padding: 0.75rem;
+  }
+
+  .topicChip {
+    min-height: 32px;
+  }
+
+  .awardMark {
+    right: 0.85rem;
+    bottom: 0.75rem;
+    font-size: 0.68rem;
   }
 }
 

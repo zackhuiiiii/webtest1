@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/Publications.module.css';
 import { Publication, parseBibFile } from '@/utils/bibParser';
@@ -10,7 +10,14 @@ interface PublicationsPageProps {
 
 export default function PublicationsPage({ publications = [] }: PublicationsPageProps) {
   const [filterText, setFilterText] = useState('');
+  const [activeTopic, setActiveTopic] = useState('All topics');
   const [showAbstract, setShowAbstract] = useState<{ [key: string]: boolean }>({});
+
+  const allTopics = useMemo(() => {
+    const unique = new Set<string>();
+    publications.forEach(pub => pub.topics.forEach(topic => unique.add(topic)));
+    return ['All topics', ...Array.from(unique).sort((a, b) => a.localeCompare(b))];
+  }, [publications]);
 
   const toggleAbstract = (id: string) => {
     setShowAbstract(prev => ({
@@ -19,11 +26,20 @@ export default function PublicationsPage({ publications = [] }: PublicationsPage
     }));
   };
 
-  const filteredPublications = publications.filter(pub => 
-    pub.title.toLowerCase().includes(filterText.toLowerCase()) ||
-    pub.authors.some(author => author.toLowerCase().includes(filterText.toLowerCase())) ||
-    pub.conference.toLowerCase().includes(filterText.toLowerCase())
-  );
+  const query = filterText.toLowerCase();
+  const filteredPublications = publications.filter(pub => {
+    const matchesTopic =
+      activeTopic === 'All topics' || pub.topics.includes(activeTopic);
+    const matchesQuery =
+      !query ||
+      pub.title.toLowerCase().includes(query) ||
+      pub.authors.some(author => author.toLowerCase().includes(query)) ||
+      pub.conference.toLowerCase().includes(query) ||
+      (pub.abbr || '').toLowerCase().includes(query) ||
+      (pub.note || '').toLowerCase().includes(query) ||
+      pub.topics.some(topic => topic.toLowerCase().includes(query));
+    return matchesTopic && matchesQuery;
+  });
 
   return (
     <div className={styles.container}>
@@ -34,36 +50,60 @@ export default function PublicationsPage({ publications = [] }: PublicationsPage
 
       <input
         type="text"
-        placeholder="Type to filter"
+        placeholder="Type to filter by title, author, or topic"
         className={styles.searchInput}
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}
       />
 
+      <div className={styles.topicBar}>
+        {allTopics.map(topic => (
+          <button
+            key={topic}
+            type="button"
+            className={`${styles.topicChip} ${activeTopic === topic ? styles.topicChipActive : ''}`}
+            onClick={() => setActiveTopic(topic)}
+          >
+            {topic}
+          </button>
+        ))}
+      </div>
+
       <div className={styles.publicationsList}>
         {filteredPublications.map((pub) => (
           <div key={pub.id} className={styles.publicationCard}>
-          <div className={styles.cardContent}>
-            <div className={styles.imageContainer}>
-              {pub.abbr && (
-                <div className={styles.badge}
-                data-conf={pub.abbr.split(' ')[0]}
-                >{pub.abbr}</div>
-              )}
-              {pub.preview && (
-                <div className={styles.previewImage}>
-                  <Image
-                    src={`/images/${pub.preview}`}
-                    alt={pub.title}
-                    width={160}
-                    height={100}
-                    layout="responsive"
-                    objectFit="contain"
-                  />
-                </div>
-              )}
-            </div>
-            <div className={styles.publicationInfo}>
+            {pub.note && (
+              <span
+                className={styles.awardMark}
+                data-award={pub.note}
+                title={pub.note}
+              >
+                ★ {pub.note}
+              </span>
+            )}
+            <div className={styles.cardContent}>
+              <div className={styles.imageContainer}>
+                {pub.abbr && (
+                  <div className={styles.badge}
+                    data-conf={pub.abbr.split(' ')[0]}
+                  >
+                    {pub.abbr}
+                  </div>
+                )}
+                {pub.preview && (
+                  <div className={styles.previewImage}>
+                    <Image
+                      src={`/images/${pub.preview}`}
+                      alt={pub.title}
+                      width={160}
+                      height={100}
+                      layout="responsive"
+                      objectFit="contain"
+                    />
+                  </div>
+                )}
+              </div>
+              <div className={styles.publicationInfo}>
                 <h2 className={styles.publicationTitle}>{pub.title}</h2>
                 <p className={styles.authors}>
                   {pub.authors.map((author, index) => {
@@ -82,18 +122,32 @@ export default function PublicationsPage({ publications = [] }: PublicationsPage
                 </p>
                 <p className={styles.venue}>{pub.conference}</p>
 
-              
-              <div className={styles.actions}>
-                {pub.abstract && (
-                  <button
-                    onClick={() => toggleAbstract(pub.id)}
-                    className={styles.actionButton}
-                  >
-                    ABS
-                  </button>
+                {pub.topics.length > 0 && (
+                  <div className={styles.cardTopics}>
+                    {pub.topics.map(topic => (
+                      <button
+                        key={topic}
+                        type="button"
+                        className={`${styles.topicChip} ${activeTopic === topic ? styles.topicChipActive : ''}`}
+                        onClick={() => setActiveTopic(topic)}
+                      >
+                        {topic}
+                      </button>
+                    ))}
+                  </div>
                 )}
+
+                <div className={styles.actions}>
+                  {pub.abstract && (
+                    <button
+                      onClick={() => toggleAbstract(pub.id)}
+                      className={styles.actionButton}
+                    >
+                      ABS
+                    </button>
+                  )}
                   {pub.pdf && (
-                    <a 
+                    <a
                       href={pub.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -109,7 +163,7 @@ export default function PublicationsPage({ publications = [] }: PublicationsPage
                     BIB
                   </button>
                 </div>
-                
+
                 {showAbstract[pub.id] && pub.abstract && (
                   <p className={styles.abstract}>{pub.abstract}</p>
                 )}
@@ -127,7 +181,7 @@ export const getStaticProps: GetStaticProps<PublicationsPageProps> = async () =>
     const publications = parseBibFile();
     return {
       props: {
-        publications: publications.sort((a, b) => 
+        publications: publications.sort((a, b) =>
           parseInt(b.year) - parseInt(a.year)
         ),
       },
